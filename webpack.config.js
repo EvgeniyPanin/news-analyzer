@@ -11,8 +11,8 @@ const path = require('path');
 module.exports = {
     entry: {
         main: './src/index.js',
-/*         about: './src/about/index.js',
-        analytics: './src/analytics/index.js' */
+        about: './src/about/index.js',
+        analytics: './src/analytics/index.js'
  },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -65,17 +65,21 @@ module.exports = {
         new HtmlWebpackPlugin({ 
             inject: false,
             template: './src/index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+            chunks: ['main'] 
+
         }),
         new HtmlWebpackPlugin({ 
             inject: false,
             template: './src/about/about.html',
-            filename: 'about.html'
+            filename: 'about.html',
+            chunks: ['about'] 
         }),
         new HtmlWebpackPlugin({ 
             inject: false,
             template: './src/analytics/analytics.html',
-            filename: 'analytics.html'
+            filename: 'analytics.html',
+            chunks: ['analytics']
         }),
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
