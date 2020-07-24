@@ -11,8 +11,8 @@ const path = require('path');
 module.exports = {
     entry: {
         main: './src/index.js',
-        about: './src/about/index.js',
-        analytics: './src/analytics/index.js'
+        about: './src/pages/about/index.js',
+        analytics: './src/pages/analytics/index.js'
  },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -71,13 +71,13 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             inject: false,
-            template: './src/about/about.html',
+            template: './src/pages/about/about.html',
             filename: 'about.html',
             chunks: ['about']
         }),
         new HtmlWebpackPlugin({
             inject: false,
-            template: './src/analytics/analytics.html',
+            template: './src/pages/analytics/analytics.html',
             filename: 'analytics.html',
             chunks: ['analytics']
         }),

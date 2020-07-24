@@ -1,11 +1,12 @@
 @import url('./__logo/header__logo.css');
 
 .header {
+  padding-top: 0;
+  padding-bottom: 0;
   height: 1px;
   min-height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(196, 196, 196, 0.01);
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
 }

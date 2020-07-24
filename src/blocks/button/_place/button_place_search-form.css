@@ -1,0 +1,9 @@
+.button_place_search-form {
+  width: 168px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #2F71E5;
+  color: #fff;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+}

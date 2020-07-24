@@ -1,30 +1,46 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang='ru'>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Анализатор новостей">
-  <meta name="author" content="Evgeniy Panin">
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <meta name='description' content='Анализатор новостей'>
+  <meta name='author' content='Evgeniy Panin'>
   <title>Анализатор новостей</title>
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+  <link rel='stylesheet' href='<%=htmlWebpackPlugin.files.css %>'>
 </head>
 
 <body class='page'>
-  <header class='section header header_theme_white'>
-    <span class='header__logo'>NewsAnalyzer</span>
-    <nav class='navigation navigation_theme_white'>
-      <ul class='navigation__links'>
-        <li class='navigation__item navigation__item_active'>
-          <a href="./index.html" class='navigation__link navigation__link_theme_white'>Главная</a>
-        </li>
-        <li class='navigation__item'>
-          <a href="./about.html" class='navigation__link navigation__link_theme_white'>О проекте</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <div class='illustration'>
+    <header class='section header header_theme_white'>
+      <span class='header__logo'>NewsAnalyzer</span>
+      <nav class='navigation navigation_theme_white'>
+        <ul class='navigation__links'>
+          <li class='navigation__item navigation__item_active'>
+            <a href='./index.html' class='navigation__link navigation__link_theme_white'>Главная</a>
+          </li>
+          <li class='navigation__item'>
+            <a href='./about.html' class='navigation__link navigation__link_theme_white'>О проекте</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class='section search-section'>
+      <div class='search-section__container'>
+        <h1 class='search__title'>
+          Что в мире творится?
+        </h1>
+        <p class='search__subtitle'>
+          Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
+        </p>
+        <form name='search' class='search-form'>
+          <input type='text' class='search-form__input' placeholder='Введите тему новости'>
+          <button class='button button_place_search-form'>Искать</button>
+        </form>
+      </div>
+    </section>
+  </div>
 
-  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+  <script src='<%= htmlWebpackPlugin.files.js %>'></script>
 </body>
