@@ -25,14 +25,14 @@ module.exports = {
                     exclude: /node_modules/
                 },
                 {
-                    test: /\.css$/, 
-                    use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 
+                    test: /\.css$/,
+                    use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
                             {
                                 loader:'css-loader',
                                 options: {
                                     importLoaders: 2,
-                                } 
-                            }, 
+                                }
+                            },
                             'postcss-loader']
                 },
                 {
@@ -62,20 +62,20 @@ module.exports = {
             assetNameRegExp: /\.css$/g,
             canPrint: true
         }),
-        new HtmlWebpackPlugin({ 
+        new HtmlWebpackPlugin({
             inject: false,
             template: './src/index.html',
             filename: 'index.html',
-            chunks: ['main'] 
+            chunks: ['main']
 
         }),
-        new HtmlWebpackPlugin({ 
+        new HtmlWebpackPlugin({
             inject: false,
             template: './src/about/about.html',
             filename: 'about.html',
-            chunks: ['about'] 
+            chunks: ['about']
         }),
-        new HtmlWebpackPlugin({ 
+        new HtmlWebpackPlugin({
             inject: false,
             template: './src/analytics/analytics.html',
             filename: 'analytics.html',

@@ -1,9 +1,4 @@
-@font-face {
-    font-family: 'Roboto';
-    font-weight: 400;
-    src: url('../vendor/fonts/sourcesanspro-regular.woff') format("woff");
-}
-  
+
 @font-face {
     font-family: 'Roboto';
     font-weight: 500;
@@ -11,13 +6,13 @@
 }
 
 @font-face {
-    font-family: 'Roboto';
-    font-weight: 700;
+    font-family: 'Roboto Slab';
+    font-weight: 500;
     src: url('../vendor/fonts/robotoslab-regular.woff') format("woff");
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Roboto';
     font-weight: 900;
     src: url('../vendor/fonts/roboto-medium.woff') format("woff");
-}
+} */

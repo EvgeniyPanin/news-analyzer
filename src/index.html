@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,21 @@
   <title>Анализатор новостей</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
+
 <body class='page'>
+  <header class='section header header_theme_white'>
+    <span class='header__logo'>NewsAnalyzer</span>
+    <nav class='navigation navigation_theme_white'>
+      <ul class='navigation__links'>
+        <li class='navigation__item navigation__item_active'>
+          <a href="./index.html" class='navigation__link navigation__link_theme_white'>Главная</a>
+        </li>
+        <li class='navigation__item'>
+          <a href="./about.html" class='navigation__link navigation__link_theme_white'>О проекте</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-
-    <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
-    

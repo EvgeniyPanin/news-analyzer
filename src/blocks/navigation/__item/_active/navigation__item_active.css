@@ -1,0 +1,6 @@
+.navigation__item_active {
+  color: inherit;
+  border-bottom: 3px solid;
+  box-sizing: border-box;
+}
+

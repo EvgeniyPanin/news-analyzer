@@ -1,0 +1,11 @@
+.navigation__item {
+  color: #B6BCBF;
+  display: flex;
+  align-items: center;
+  margin-right: 34px;
+  height: 100%;
+}
+
+.navigation__item:last-of-type {
+  margin-right: 0;
+}
