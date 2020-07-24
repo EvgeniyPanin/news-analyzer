@@ -1,0 +1,7 @@
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts.css');
+
+.page {
+    padding: 0 104px;
+    height: 100vh;
+}

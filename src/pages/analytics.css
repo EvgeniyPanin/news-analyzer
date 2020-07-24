@@ -1,0 +1,7 @@
+@import url('../vendor/fonts.css');
+
+h1 {
+    color: skyblue;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
