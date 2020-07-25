@@ -10,6 +10,7 @@
 @import url('./blocks/button/button.css');
 @import url('./blocks/button/_place/button_place_search-form.css');
 @import url('./blocks/illustration/illustration.css');
+@import url('./blocks/preloader/preloader.css');
 
 .page {
     font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;

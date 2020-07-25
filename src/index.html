@@ -41,6 +41,24 @@
       </div>
     </section>
   </div>
-
+  <section class='section preloader'>
+    <div class='preloader__container preloader__container_active'>
+      <div class='preloader__image-container'>
+        <i class='preloader__circle'></i>
+      </div>
+      <p class='preloader__description'>Идет поиск новостей...</p>
+    </div>
+    <div class='preloader__container preloader__container_active'>
+      <div class='preloader__image-container'>
+        <span class='preloader__logo-not-found'></span>
+      </div>
+      <h2 class='preloader__title'>
+        Ничего не найдено
+      </h2>
+      <p class='preloader__description'>
+        К сожалению по вашему запросу ничего не найдено.
+      </p>
+    </div>
+  </section>
   <script src='<%= htmlWebpackPlugin.files.js %>'></script>
 </body>

@@ -7,3 +7,12 @@
   color: #fff;
   box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
 }
+
+.button_place_search-form:hover {
+  background: #347EFF;
+}
+
+.button_place_search-form:focus {
+  outline: none;
+  background: #2A65CC;
+}

@@ -1,0 +1,7 @@
+.preloader__logo-not-found {
+  display: block;
+  width: 96px;
+  height: 96px;
+  background-image: url('../../../images/not-found_v1.svg');
+  background-position: center;
+}
