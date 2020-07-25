@@ -5,5 +5,7 @@
 @import url('./__paragraph/author__paragraph.css');
 
 .author {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
 }

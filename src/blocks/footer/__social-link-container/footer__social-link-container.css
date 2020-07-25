@@ -1,0 +1,7 @@
+.footer__social-link-container {
+  margin-left: 28px;
+}
+
+.footer__social-link-container:first-of-type {
+  margin-left: 0;
+}

@@ -1,0 +1,8 @@
+.footer__link-container {
+  margin-left: 40px;
+}
+
+.footer__link-container:first-of-type {
+  margin-left: 0;
+}
+
