@@ -1,0 +1,8 @@
+.news__cards-container {
+  margin: 61px 0 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  list-style-type: none;
+  padding-left: 0;
+}

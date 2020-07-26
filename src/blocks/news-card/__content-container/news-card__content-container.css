@@ -1,0 +1,6 @@
+.news-card__content-container {
+  margin: 16px 24px 59px;
+  max-height: 230px;
+  overflow: hidden;
+  text-overflow: clip ellipsis;
+}
