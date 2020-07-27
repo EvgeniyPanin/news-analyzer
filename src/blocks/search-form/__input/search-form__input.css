@@ -8,8 +8,35 @@
   border-radius: 100px;
   padding-left: 24px;
   padding-right: 169px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .search-form__input:focus {
   outline: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .search-form__input {
+    min-height: 56px;
+    padding-right: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-form__input {
+    padding-right: 130px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .search-form__input {
+    padding-right: 120px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .search-form__input {
+    padding-right: 0;
+  }
 }

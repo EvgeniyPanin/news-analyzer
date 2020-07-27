@@ -16,3 +16,29 @@
   outline: none;
   background: #2A65CC;
 }
+
+@media screen and (max-width: 1024px) {
+  .button_place_search-form {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button_place_search-form {
+      width: 130px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .button_place_search-form {
+      width: 120px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .button_place_search-form {
+    width: 100%;
+    position: static;
+    margin-top: 16px;
+  }
+}

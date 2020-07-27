@@ -9,3 +9,15 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@media screen and (max-width: 1024px) {
+  .header {
+      min-height: 64px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .header {
+    min-height: 56px;
+  }
+}

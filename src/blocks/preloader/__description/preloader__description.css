@@ -5,3 +5,10 @@
   color: #B6BCBF;
   text-align: center;
 }
+
+@media screen and (max-width: 485px) {
+  .preloader__description {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}

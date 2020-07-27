@@ -5,3 +5,10 @@
   margin: 0 0 10px;
   text-align: center;
 }
+
+@media screen and (max-width: 485px) {
+  .preloader__title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}

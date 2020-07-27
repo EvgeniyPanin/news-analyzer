@@ -5,3 +5,10 @@
   margin: 0;
   font-family: 'Roboto Slab', 'Roboto', 'Inter', 'Arial Narrow Bold', sans-serif;
 }
+
+@media screen and (max-width: 1024px) {
+  .search__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
