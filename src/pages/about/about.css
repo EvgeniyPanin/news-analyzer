@@ -1,7 +1,17 @@
 @import url('../../vendor/fonts.css');
+@import url('../../vendor/normalize.css');
+@import url('../../blocks/section/section.css');
+@import url('../../blocks/header/header.css');
+@import url('../../blocks/header/_theme/header_theme_black.css');
+@import url('../../blocks/navigation/__link/_theme/navigation__link_theme_black.css');
+@import url('../../blocks/navigation/navigation.css');
+@import url('../../blocks/info/info.css');
+@import url('../../blocks/tehnologies/tehnologies.css');
+@import url('../../blocks/technology/technology.css');
+@import url('../../blocks/author/author.css');
 
-h1 {
-    color: green;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+
+.page {
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+  color: #1A1B22;
 }

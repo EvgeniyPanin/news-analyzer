@@ -1,0 +1,7 @@
+@import url('./__title/info__title.css');
+@import url('./__paragraph/info__paragraph.css');
+
+.info {
+  max-width: 1440px;
+  margin: 0 auto;
+}

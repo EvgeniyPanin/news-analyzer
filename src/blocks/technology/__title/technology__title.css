@@ -1,0 +1,11 @@
+.technology__title {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  margin: 0 auto;
+}
