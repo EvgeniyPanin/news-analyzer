@@ -9,3 +9,9 @@
   margin: 0 auto;
   display: flex;
 }
+
+@media screen and (max-width: 600px) {
+  .author {
+    flex-direction: column;
+  }
+}

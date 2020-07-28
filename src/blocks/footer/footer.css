@@ -6,6 +6,8 @@
 @import url('./__social-link/_type/footer__social-link_type_githab.css');
 @import url('./__social-link/_type/footer__social-link_type_facebook.css');
 @import url('./__social-link-container/footer__social-link-container.css');
+@import url('./__links/_type/footer__links_type_social.css');
+@import url('./__links/_type/footer__links_type_nav.css');
 
 .footer {
   padding-top: 0;
@@ -16,4 +18,25 @@
   min-height: 80px;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    min-height: 64px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    justify-content: start;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .footer {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
 }

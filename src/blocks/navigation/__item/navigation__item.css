@@ -9,3 +9,15 @@
 .navigation__item:last-of-type {
   margin-right: 0;
 }
+
+@media screen and (max-width: 600px) {
+  .navigation__item {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .navigation__item {
+    margin-right: 11px;
+  }
+}

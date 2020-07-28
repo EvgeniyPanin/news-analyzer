@@ -1,3 +1,33 @@
 .author__description {
-  padding: 48px 112px 0 56px;
+  padding: 48px 112px 20px 56px;
+}
+
+@media screen and (max-width: 1024px) {
+  .author__description {
+    padding: 24px 56px 16px 46px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .author__description {
+    padding: 0 0 8px 32px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .author__description {
+    padding: 30px 0 0;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .author__description {
+    padding: 24px 0 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .author__description {
+    padding: 18px 0 0;
+  }
 }

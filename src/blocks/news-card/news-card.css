@@ -9,8 +9,6 @@
 .news-card {
   border-radius: 8px;
   background: #fff;
-  overflow: hidden;
-  max-height: 576px;
   position: relative;
   overflow: hidden;
 }
