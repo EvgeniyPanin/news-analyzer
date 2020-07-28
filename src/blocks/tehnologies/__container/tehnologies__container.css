@@ -4,3 +4,22 @@
   padding-left: 0;
   list-style-type: none;
 }
+
+@media screen and (max-width: 1200px) {
+  .tehnologies__container {
+    justify-content: space-between;
+    margin: 40px 0 9px;
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 690px) {
+  .tehnologies__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 39px 0 12px;
+    row-gap: 15px;
+    justify-items: center;
+  }
+}

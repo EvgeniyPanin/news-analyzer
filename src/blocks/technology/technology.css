@@ -10,3 +10,9 @@
 .technology:last-of-type {
   margin-right: 0;
 }
+
+@media screen and (max-width: 1200px) {
+  .technology {
+    margin-right: 0;
+  }
+}
