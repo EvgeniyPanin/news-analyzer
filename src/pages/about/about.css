@@ -11,6 +11,7 @@
 @import url('../../blocks/author/author.css');
 @import url('../../blocks/commits/commits.css');
 @import url('../../blocks/commit-card/commit-card.css');
+@import url('../../blocks/footer/footer.css');
 
 
 .page {
