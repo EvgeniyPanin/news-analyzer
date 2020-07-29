@@ -1,0 +1,5 @@
+.commit-card__user-container {
+  margin: 12px 0 13px;
+  display: flex;
+  align-items: center;
+}

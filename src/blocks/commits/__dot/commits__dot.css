@@ -1,0 +1,12 @@
+.commits__dot {
+  display: block;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  background: #D1D2D6;
+}
+
+.commits__dot:last-of-type {
+  margin-right: 0;
+}

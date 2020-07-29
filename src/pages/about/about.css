@@ -9,6 +9,8 @@
 @import url('../../blocks/tehnologies/tehnologies.css');
 @import url('../../blocks/technology/technology.css');
 @import url('../../blocks/author/author.css');
+@import url('../../blocks/commits/commits.css');
+@import url('../../blocks/commit-card/commit-card.css');
 
 
 .page {

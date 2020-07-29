@@ -1,0 +1,7 @@
+.commit-card__user-name {
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0;
+  font-family: 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+}

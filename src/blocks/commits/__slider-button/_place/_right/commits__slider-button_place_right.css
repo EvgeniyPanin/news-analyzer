@@ -1,0 +1,6 @@
+.commits__slider-button_place_right {
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 24px;
+  transform: rotate(180deg);
+}

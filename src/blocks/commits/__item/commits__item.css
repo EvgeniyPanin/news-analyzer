@@ -1,0 +1,14 @@
+.commits__item {
+  min-width: 288px;
+  max-width: 400px;
+  margin-right: 16px;
+  flex: none;
+  width: calc((100% - 32px) / 3);
+  box-sizing: border-box;
+  /* position: relative; */
+  /* right: calc(100% + 16px); */
+}
+
+.commits__item:last-of-type {
+  margin-right: 0;
+}
