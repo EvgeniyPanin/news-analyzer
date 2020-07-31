@@ -32,11 +32,83 @@
       <li class='bread-crumbs__item'><a class='bread-crumbs__link' href='/analytics.html'>Аналитика</a></li>
     </ul>
   </nav>
-  <main>
-
-  </main>
-  <footer class="footer">
-
+  <section class='section digits'>
+    <h2 class='digits__title'>Вы спросили: «Путешествия»</h2>
+    <p class='digits__paragraph'>
+      Новостей за неделю:
+      <span class='digits__week-digit'>
+        34 324
+      </span>
+    </p>
+    <p class='digits__paragraph'>
+      Упоминаний в загаловках:
+      <span class='digits__title-digit'>
+        235
+      </span>
+    </p>
+  </section>
+  <section class='section analytics'>
+    <h2 class='analytics__title'>Аналитика по дням</h2>
+    <div class='analytics__container'>
+      <p class='analytics__column-title'>Дата (август)</p>
+      <p class='analytics__column-title'>Кол-во упоминаний</p>
+      <div class='analytics__charts-container'>
+        <p class='analytics__date'>19, пн</p>
+        <p class='analytics__date'>20, вт</p>
+        <p class='analytics__date'>21, ср</p>
+        <p class='analytics__date'>22, чт</p>
+        <p class='analytics__date'>23, пт</p>
+        <p class='analytics__date'>24, сб</p>
+        <p class='analytics__date'>25, вс</p>
+      </div>
+      <div class='analytics__charts-container'>
+        <div class='analytics__number-container analytics__number-container_place_top'>
+          <p class='analytics__number'>0</p>
+          <p class='analytics__number'>25</p>
+          <p class='analytics__number'>50</p>
+          <p class='analytics__number'>75</p>
+          <p class='analytics__number'>100</p>
+        </div>
+        <p class='analytics__diagram' style='width: 20%'>15</p>
+        <p class='analytics__diagram' style='width: 27%'>18</p>
+        <p class='analytics__diagram' style='width: 13%'>11</p>
+        <p class='analytics__diagram' style='width: 45%'>39</p>
+        <p class='analytics__diagram' style='width: 55%'>45</p>
+        <p class='analytics__diagram' style='width: 80%'>73</p>
+        <p class='analytics__diagram' style='width: 38%'>34</p>
+        <div class='analytics__number-container analytics__number-container_place_bottom'>
+          <p class='analytics__number'>0</p>
+          <p class='analytics__number'>25</p>
+          <p class='analytics__number'>50</p>
+          <p class='analytics__number'>75</p>
+          <p class='analytics__number'>100</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class='section footer'>
+    <span class='footer__copiright'>&copy; 2020 Евгений Панин</span>
+    <ul class='footer__links footer__links_type_nav'>
+      <li class='footer__link-container'>
+        <a class='footer__link' href='./index.html'>Главная</a>
+      </li>
+      <li class='footer__link-container'>
+        <a class='footer__link' href='./about.html'>О проекте</a>
+      </li>
+      <li class='footer__link-container'>
+        <a class='footer__link' target='_blank' href='https://praktikum.yandex.ru/'>Яндекс.Практикум</a>
+      </li>
+    </ul>
+    <ul class='footer__links footer__links_type_social'>
+      <li class='footer__social-link-container'>
+        <a class='footer__social-link footer__social-link_type_githab' target='_blank'
+          href='https://github.com/EvgeniyPanin'></a>
+      </li>
+      <li class='footer__social-link-container'>
+        <a class='footer__social-link footer__social-link_type_facebook' target='_blank'
+          href='https://www.facebook.com/pane.ewgen'></a>
+      </li>
+    </ul>
   </footer>
   <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>

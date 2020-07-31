@@ -5,6 +5,9 @@
 @import url('../../blocks/header/_theme/header_theme_black.css');
 @import url('../../blocks/navigation/navigation.css');
 @import url('../../blocks/bread-crumbs/bread-crumbs.css');
+@import url('../../blocks/digits/digits.css');
+@import url('../../blocks/analytics/analytics.css');
+@import url('../../blocks/footer/footer.css');
 
 h1 {
     color: skyblue;

@@ -1,0 +1,9 @@
+.digits__paragraph {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 4px 0 0;
+}
+
+.digits__paragraph:first-of-type {
+  margin: 0;
+}

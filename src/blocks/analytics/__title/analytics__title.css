@@ -1,0 +1,12 @@
+.analytics__title {
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0;
+  font-family: 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+}
+
+@media screen and (max-width: 485px) {
+  .analytics__title {
+    font-size: 22px;
+  }
+}

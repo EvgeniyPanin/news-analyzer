@@ -1,0 +1,15 @@
+@import url('./__title/analytics__title.css');
+@import url('./__container/analytics__container.css');
+@import url('./__column-title/analytics__column-title.css');
+@import url('./__charts-container/analytics__charts-container.css');
+@import url('./__date/analytics__date.css');
+@import url('./__diagram/analytics__diagram.css');
+@import url('./__number-container/analytics__number-container.css');
+@import url('./__number/analytics__number.css');
+@import url('./__number-container/_place/analytics__number-container_place_top.css');
+@import url('./__number-container/_place/analytics__number-container_place_bottom.css');
+
+.analytics {
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+  background: #F5F6F7;
+}
