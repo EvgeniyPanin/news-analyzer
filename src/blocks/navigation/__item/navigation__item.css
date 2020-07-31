@@ -6,6 +6,10 @@
   height: 100%;
 }
 
+.navigation__item .navigation__link {
+  cursor: text;
+}
+
 .navigation__item:last-of-type {
   margin-right: 0;
 }

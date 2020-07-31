@@ -4,7 +4,7 @@
   }
 }
 
-@media screen and (max-width: 485px) {
+@media screen and (max-width: 680px) {
   .section-link_place_commits {
     display: none;
   }
