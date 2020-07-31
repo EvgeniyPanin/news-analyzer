@@ -5,3 +5,9 @@
   margin: 0;
   font-family: 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
 }
+
+@media screen and (max-width: 1024px) {
+  .commit-card__user-name {
+    font-size: 20px;
+  }
+}

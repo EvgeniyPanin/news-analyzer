@@ -15,6 +15,7 @@
 @import url('./blocks/author/author.css');
 @import url('./blocks/footer/footer.css');
 @import url('./blocks/news/news.css');
+@import url('./blocks/section-link/section-link.css');
 @import url('./blocks/news-card/news-card.css');
 
 .page {

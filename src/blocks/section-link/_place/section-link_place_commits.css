@@ -1,0 +1,12 @@
+@media screen and (max-width: 710px) {
+  .section-link_place_commits {
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .section-link_place_commits {
+    display: none;
+  }
+}
+

@@ -9,8 +9,11 @@
 @import url('../../blocks/tehnologies/tehnologies.css');
 @import url('../../blocks/technology/technology.css');
 @import url('../../blocks/author/author.css');
-@import url('../../blocks/commits/commits.css');
+@import url('../../blocks/section-link/section-link.css');
+@import url('../../blocks/section-link/_place/section-link_place_commits.css');
 @import url('../../blocks/commit-card/commit-card.css');
+@import url('../../blocks/button/button.css');
+@import url('../../blocks/commits/commits.css');
 @import url('../../blocks/footer/footer.css');
 
 

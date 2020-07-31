@@ -1,0 +1,16 @@
+.button_place_commits {
+  /* display: none; */
+  text-decoration: none;
+  color: inherit;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+}
+
+@media screen and (max-width: 680px) {
+  .button_place_commits {
+    display: flex;
+    margin: 0 40px;
+  }
+}

@@ -1,5 +1,6 @@
 .commit-card__paragraph {
   font-size: 16px;
   line-height: 22px;
+  overflow: hidden;
   margin: 0;
 }

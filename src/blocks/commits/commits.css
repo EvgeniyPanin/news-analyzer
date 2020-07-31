@@ -1,5 +1,4 @@
 @import url('./__title/commits__title.css');
-@import url('./__link/commits__link.css');
 @import url('./__container/commits__container.css');
 @import url('./__item/commits__item.css');
 @import url('./__card-container/commits__card-container.css');
@@ -10,6 +9,7 @@
 @import url('./__slider-button/commits__slider-button.css');
 @import url('./__slider-button/_place/_left/commits__slider-button_place_left.css');
 @import url('./__slider-button/_place/_right/commits__slider-button_place_right.css');
+@import url('../button/_place/button_place_commits.css');
 
 
 .commits {

@@ -2,3 +2,16 @@
   position: relative;
   margin: 61px 0 0;
 }
+
+@media screen and (max-width: 1024px) {
+  .commits__slider-container {
+    margin: 30px 0 0;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .commits__slider-container {
+    margin: 11px 0 0;
+  }
+}
+
