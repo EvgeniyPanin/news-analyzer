@@ -8,8 +8,8 @@
 @media screen and (max-width: 1200px) {
   .tehnologies__container {
     justify-content: space-between;
-    margin: 40px 0 9px;
-    width: 100%;
+    margin: 37px 0 9px;
+    width: 97%;
   }
 }
 
@@ -23,3 +23,12 @@
     justify-items: center;
   }
 }
+
+@media screen and (max-width: 485px) {
+  .tehnologies__container {
+    margin: 35px 0 12px;
+    row-gap: 32px;
+    width: 100%;
+  }
+}
+

@@ -1,10 +1,11 @@
 .commits__slider-button {
-  width: 40px;
-  height: 40px;
+  /* width: 40px; */
+  /* height: 40px; */
   border-radius: 50%;
   position: absolute;
   z-index: 2;
-  box-shadow: 0px 3px 10px rgba(14, 26, 57, 0.2);
+  object-fit: cover;
+  object-position: center;
 }
 
 @media screen and (max-width: 1250px) {

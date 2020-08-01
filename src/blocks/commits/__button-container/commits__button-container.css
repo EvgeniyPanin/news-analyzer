@@ -12,6 +12,7 @@
 
 @media screen and (max-width: 485px) {
   .commits__button-container {
+    margin-top: 22px;
     padding: 0 16px;
   }
 }

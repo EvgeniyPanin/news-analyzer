@@ -12,6 +12,7 @@
 @media screen and (max-width: 1024px) {
   .info__paragraph {
     width: 80%;
+    margin: 0 0 23px;
   }
 }
 
