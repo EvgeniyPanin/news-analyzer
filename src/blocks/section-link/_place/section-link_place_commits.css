@@ -1,3 +1,8 @@
+.section-link_place_commits {
+  top: 75px;
+  right: 113px;
+}
+
 @media screen and (max-width: 710px) {
   .section-link_place_commits {
     padding-left: 40px;
