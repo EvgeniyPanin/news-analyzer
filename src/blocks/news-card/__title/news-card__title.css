@@ -3,14 +3,14 @@
   line-height: 30px;
   font-family: 'Roboto Slab', 'Roboto', 'Inter', 'Arial Narrow Bold', sans-serif;
   font-weight: normal;
-  margin: 7px 0 11px;
+  margin: 14px 0 16px;
 }
 
 @media screen and (max-width: 1024px) {
   .news-card__title {
     font-size: 22px;
     line-height: 24px;
-    margin: 8px 0 6px;
+    margin: 15px 0 9px;
   }
 }
 

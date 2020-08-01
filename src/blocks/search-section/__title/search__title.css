@@ -8,6 +8,7 @@
 
 @media screen and (max-width: 1024px) {
   .search__title {
+    max-width: 70%;
     font-size: 36px;
     line-height: 40px;
   }

@@ -7,6 +7,13 @@
   flex-shrink: 0;
 }
 
+@media screen and (max-width: 800px) {
+  .author__avatar-container {
+    width: 33.5%;
+    padding-bottom: 33.5%;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .author__avatar-container {
     width: 50%;

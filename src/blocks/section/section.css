@@ -1,5 +1,5 @@
 .section {
-  padding: 80px 104px;
+  padding: 80px 104px 80px 104px;
 }
 
 @media screen and (max-width: 1024px) {

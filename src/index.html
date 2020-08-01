@@ -35,13 +35,13 @@
           Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
         </p>
         <form name='search' class='search-form'>
-          <input type='text' class='search-form__input' placeholder='Введите тему новости'>
+          <input type='text' class='search-form__input' placeholder='Введите тему новости' required>
           <button class='button button_place_search-form'>Искать</button>
         </form>
       </div>
     </section>
   </div>
-  <section class='section preloader'>
+  <!-- <section class='section preloader'>
     <div class='preloader__container preloader__container_active'>
       <div class='preloader__image-container'>
         <i class='preloader__circle'></i>
@@ -59,10 +59,10 @@
         К сожалению по вашему запросу ничего не найдено.
       </p>
     </div>
-  </section>
+  </section> -->
   <section class='section news'>
     <h2 class='news__title'>Результаты поиска</h2>
-    <a class='section-link' href='/analytics.html'>Посмотреть аналитику &rsaquo;</a>
+    <a class='section-link' href='/analytics.html'>Посмотреть аналитику <span class='section-link__span'>&rsaquo;</span></a>
     <ul class='news__cards-container'>
       <li class='news-card'>
         <span class='news-card__photo-container'>

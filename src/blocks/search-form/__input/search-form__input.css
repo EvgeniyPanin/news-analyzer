@@ -18,12 +18,13 @@
 
 @media screen and (max-width: 1024px) {
   .search-form__input {
-    min-height: 56px;
-    padding-right: 160px;
+    min-height: 58px;
+    padding-right: 155px;
+    margin-bottom: 7px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
   .search-form__input {
     padding-right: 130px;
   }

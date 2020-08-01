@@ -8,12 +8,12 @@
   color: #B6BCBF;
   position: absolute;
   left: 24px;
-  bottom: 24px;
+  bottom: 22px;
 }
 
 @media screen and (max-width: 1024px) {
   .news-card__label {
     left: 16px;
-  bottom: 16px;
+    bottom: 8px;
   }
 }

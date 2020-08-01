@@ -1,5 +1,5 @@
 .news__cards-container {
-  margin: 61px 0 64px;
+  margin: 65px 0 64px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 1024px) {
   .news__cards-container {
-    margin: 30px 0 32px;
+    margin: 30px 0 30px;
     gap: 8px;
   }
 }

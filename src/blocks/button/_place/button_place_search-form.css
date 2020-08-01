@@ -19,11 +19,11 @@
 
 @media screen and (max-width: 1024px) {
   .button_place_search-form {
-    width: 160px;
+    width: 155px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 760px) {
   .button_place_search-form {
       width: 130px;
   }

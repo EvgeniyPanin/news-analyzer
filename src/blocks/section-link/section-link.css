@@ -1,3 +1,5 @@
+@import url('./__span/section-link__span.css');
+
 .section-link {
   color: inherit;
   text-decoration: none;
@@ -5,8 +7,8 @@
   font-size: 18px;
   line-height: 24px;
   position: absolute;
-  top: 91px;
-  right: 110px;
+  top: 86px;
+  right: 112px;
   transition: .3s;
 }
 
@@ -16,8 +18,8 @@
 
 @media screen and (max-width: 1024px) {
   .section-link {
-    top: 51px;
-    right: 44px;
+    top: 40px;
+    right: 46px;
   }
 }
 

@@ -1,6 +1,11 @@
+.footer__links_type_nav {
+  padding-right: 40px;
+}
+
 @media screen and (max-width: 730px) {
   .footer__links_type_nav {
     margin: 20px 0 40px;
+    padding-right: 10px;
     order: 0;
   }
 }

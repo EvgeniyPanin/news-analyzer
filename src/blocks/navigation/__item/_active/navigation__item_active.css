@@ -5,6 +5,6 @@
 }
 
 .navigation__item_active .navigation__link {
-  cursor: pointer;
+  cursor: text;
 }
 
