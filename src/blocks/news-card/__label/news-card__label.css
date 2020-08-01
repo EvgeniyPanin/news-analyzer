@@ -17,3 +17,10 @@
     bottom: 8px;
   }
 }
+
+@media screen and (max-width: 485px) {
+  .news-card__label {
+    left: 16px;
+    bottom: 16px;
+  }
+}

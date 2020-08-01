@@ -23,14 +23,14 @@
 
 @media screen and (max-width: 485px) {
   .author__avatar-container {
-    width: 80%;
-    padding-bottom: 80%;
+    width: 74%;
+    padding-bottom: 74%;
   }
 }
 
 @media screen and (max-width: 400px) {
   .author__avatar-container {
-    width: 100%;
-    padding-bottom: 100%;
+    width: 95.5%;
+    padding-bottom: 95.5%;
   }
 }

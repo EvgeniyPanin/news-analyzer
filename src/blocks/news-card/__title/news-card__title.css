@@ -17,6 +17,6 @@
 @media screen and (max-width: 485px) {
   .news-card__title {
     line-height: 26px;
-    margin: 9px 0 5px;
+    margin: 17px 0 9px;
   }
 }

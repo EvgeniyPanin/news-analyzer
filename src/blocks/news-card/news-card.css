@@ -14,3 +14,9 @@
   display: flex;
   flex-direction: column;
 }
+
+@media screen and (max-width: 485px) {
+  .news-card {
+    border-radius: 15px;
+  }
+}

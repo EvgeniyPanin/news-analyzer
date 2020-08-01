@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 540px) {
   .footer__link-container {
-    margin: 20px 0 0;
+    margin: 24px 0 0;
   }
 
   .footer__link-container:first-of-type {

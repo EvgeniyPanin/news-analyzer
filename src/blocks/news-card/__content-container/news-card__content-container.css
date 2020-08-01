@@ -17,3 +17,9 @@
     max-height: 203px;
   }
 }
+
+@media screen and (max-width: 485px) {
+  .news-card__content-container {
+    max-height: 190px;
+  }
+}

@@ -5,3 +5,9 @@
   color: #B6BCBF;
   font-family: 'Source Sans Pro', 'Roboto', 'Inter', 'Arial Narrow Bold', sans-serif;
 }
+
+@media screen and (max-width: 485px) {
+  .news-card__date {
+    margin-top: 2px;
+  }
+}

@@ -13,3 +13,9 @@
     line-height: 40px;
   }
 }
+
+@media screen and (max-width: 485px) {
+  .search__title {
+    max-width: 80%;
+  }
+}
