@@ -6,3 +6,9 @@
 .digits {
   font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
 }
+
+@media screen and (max-width: 485px) {
+  .digits {
+    padding-top: 18px;
+  }
+}

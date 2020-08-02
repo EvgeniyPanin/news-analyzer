@@ -13,3 +13,9 @@
   font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
   background: #F5F6F7;
 }
+
+@media screen and (max-width: 485px) {
+  .analytics {
+    padding-top: 18px;
+  }
+}

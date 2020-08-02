@@ -1,7 +1,7 @@
 .analytics__container {
-  margin-top: 44px;
+  margin-top: 48px;
   display: grid;
-  grid-template-columns: 9.5% 90.5%;
+  grid-template-columns: 8.5% 91.5%;
   grid-auto-rows: minmax(42px, auto);
 }
 
@@ -14,12 +14,13 @@
 @media screen and (max-width: 768px) {
   .analytics__container {
     grid-template-columns: 17% 83%;
+    margin-top: 50px;
   }
 }
 
 @media screen and (max-width: 485px) {
   .analytics__container {
-    margin-top: 10px;
-    grid-template-columns: 20% 80%;
+    margin-top: 12px;
+    grid-template-columns: 28% 72%;
   }
 }

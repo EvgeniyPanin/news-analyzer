@@ -5,13 +5,13 @@
 
 .bread-crumbs {
   padding-bottom: 0;
-  padding-top: 37px;
+  padding-top: 39px;
   font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
 }
 
 @media screen and (max-width: 1024px) {
   .bread-crumbs {
-    padding-top: 29px;
+    padding-top: 32px;
   }
 }
 
