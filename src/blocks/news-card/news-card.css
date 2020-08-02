@@ -13,6 +13,15 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.news-card:hover {
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(212, 212, 212, 0.66);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(212, 212, 212, 0.66);
+  box-shadow: 4px 4px 8px 0px rgba(212, 212, 212, 0.66);
 }
 
 @media screen and (max-width: 485px) {

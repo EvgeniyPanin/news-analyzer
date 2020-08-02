@@ -68,6 +68,7 @@ module.exports = {
       inject: false,
       template: "./src/index.html",
       filename: "index.html",
+      favicon: "./src/images/favicon-16x16.png",
       chunks: ["main"],
     }),
     new HtmlWebpackPlugin({
