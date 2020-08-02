@@ -1,4 +1,4 @@
-.search__title {
+.search-section__title {
   font-size: 60px;
   line-height: 64px;
   font-weight: normal;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .search__title {
+  .search-section__title {
     max-width: 70%;
     font-size: 36px;
     line-height: 40px;
@@ -15,7 +15,7 @@
 }
 
 @media screen and (max-width: 485px) {
-  .search__title {
+  .search-section__title {
     max-width: 80%;
   }
 }

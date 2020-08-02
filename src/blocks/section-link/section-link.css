@@ -10,6 +10,7 @@
   top: 86px;
   right: 112px;
   transition: .3s;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
 }
 
 .section-link:hover {

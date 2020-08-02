@@ -19,6 +19,7 @@
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
 }
 
 @media screen and (max-width: 1024px) {

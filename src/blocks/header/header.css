@@ -8,6 +8,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+
 }
 
 @media screen and (max-width: 1024px) {

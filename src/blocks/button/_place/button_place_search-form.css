@@ -13,7 +13,7 @@
 }
 
 .button_place_search-form:focus {
-  outline: none;
+  outline: 1px solid blue;
   background: #2A65CC;
 }
 

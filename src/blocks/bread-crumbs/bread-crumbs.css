@@ -4,6 +4,8 @@
 @import url('./__link/_active/bread-crumbs__link_active.css');
 
 .bread-crumbs {
+  max-width: 1440px;
+  margin: 0 auto;
   padding-bottom: 0;
   padding-top: 39px;
   font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;

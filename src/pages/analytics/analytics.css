@@ -10,8 +10,6 @@
 @import url('../../blocks/analytics/analytics.css');
 @import url('../../blocks/footer/footer.css');
 
-h1 {
-    color: skyblue;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+.page {
+  color: #1A1B22;
 }

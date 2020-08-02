@@ -19,6 +19,5 @@
 @import url('./blocks/news-card/news-card.css');
 
 .page {
-    font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
     color: #1A1B22;
 }

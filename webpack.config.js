@@ -27,7 +27,12 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+          isDev ? "style-loader" : {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../'
+            }
+          },
           {
             loader: "css-loader",
             options: {
@@ -40,7 +45,7 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
         use: [
-          "file-loader?name=./images/[name].[ext]",
+          "file-loader?name=./images/[name].[ext]?",
           {
             loader: "image-webpack-loader",
             options: {},
@@ -68,7 +73,6 @@ module.exports = {
       inject: false,
       template: "./src/index.html",
       filename: "index.html",
-      favicon: "./src/images/favicon-16x16.png",
       chunks: ["main"],
     }),
     new HtmlWebpackPlugin({

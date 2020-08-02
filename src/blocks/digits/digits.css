@@ -4,6 +4,8 @@
 @import url('./__title-digit/digits__title-digit.css');
 
 .digits {
+  max-width: 1440px;
+  margin: 0 auto;
   font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
 }
 

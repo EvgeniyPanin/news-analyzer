@@ -4,6 +4,7 @@
 .tehnologies {
   background: #F5F6F7;
   display: flex;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
 }
 
 @media screen and (max-width: 1200px) {

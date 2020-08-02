@@ -1,4 +1,4 @@
-.search__subtitle {
+.search-section__subtitle {
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -6,13 +6,13 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .search__subtitle {
+  .search-section__subtitle {
     margin: 15px 0 21px;
   }
 }
 
 @media screen and (max-width: 485px) {
-  .search__subtitle {
+  .search-section__subtitle {
     font-size: 20px;
     line-height: 26px;
     margin: 11px 0 65px;
