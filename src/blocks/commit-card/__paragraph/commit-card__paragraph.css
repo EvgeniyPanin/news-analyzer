@@ -1,0 +1,12 @@
+.commit-card__paragraph {
+  font-size: 16px;
+  line-height: 22px;
+  overflow: hidden;
+  margin: 4px 0 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .commit-card__paragraph {
+    margin: 0;
+  }
+}

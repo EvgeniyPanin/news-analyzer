@@ -1,0 +1,43 @@
+@import url('./__copiright/footer__copiright.css');
+@import url('./__links/footer__links.css');
+@import url('./__link-container/footer__link-container.css');
+@import url('./__link/footer__link.css');
+@import url('./__social-link/footer__social-link.css');
+@import url('./__social-link/_type/footer__social-link_type_githab.css');
+@import url('./__social-link/_type/footer__social-link_type_facebook.css');
+@import url('./__social-link-container/footer__social-link-container.css');
+@import url('./__links/_type/footer__links_type_social.css');
+@import url('./__links/_type/footer__links_type_nav.css');
+
+.footer {
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    min-height: 64px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    justify-content: start;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .footer {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+}

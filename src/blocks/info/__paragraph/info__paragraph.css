@@ -1,0 +1,23 @@
+.info__paragraph {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 24px 0 0;
+  width: 66.15%;
+}
+
+.info__paragraph:last-of-type {
+  margin-bottom: 11px;
+}
+
+@media screen and (max-width: 1024px) {
+  .info__paragraph {
+    width: 80%;
+    margin: 0 0 23px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info__paragraph {
+    width: 100%;
+  }
+}

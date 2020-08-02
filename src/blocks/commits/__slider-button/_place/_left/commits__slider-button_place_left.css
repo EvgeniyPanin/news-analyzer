@@ -1,0 +1,5 @@
+.commits__slider-button_place_left {
+  top: 50%;
+  left: 15px;
+  transform: translate(0, -50%);
+}

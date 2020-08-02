@@ -1,0 +1,24 @@
+@import url('./__items/bread-crumbs__items.css');
+@import url('./__item/bread-crumbs__item.css');
+@import url('./__link/bread-crumbs__link.css');
+@import url('./__link/_active/bread-crumbs__link_active.css');
+
+.bread-crumbs {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 0;
+  padding-top: 39px;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+  .bread-crumbs {
+    padding-top: 32px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .bread-crumbs {
+    display: none;
+  }
+}

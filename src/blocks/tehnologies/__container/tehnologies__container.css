@@ -1,0 +1,34 @@
+.tehnologies__container {
+  display: flex;
+  margin: 14px 0 8px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .tehnologies__container {
+    justify-content: space-between;
+    margin: 37px 0 9px;
+    width: 97%;
+  }
+}
+
+
+@media screen and (max-width: 690px) {
+  .tehnologies__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 39px 0 12px;
+    row-gap: 15px;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .tehnologies__container {
+    margin: 35px 0 12px;
+    row-gap: 32px;
+    width: 100%;
+  }
+}
+

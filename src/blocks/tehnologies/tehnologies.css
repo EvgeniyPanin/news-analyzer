@@ -1,0 +1,14 @@
+@import url('./__title/tehnologies__title.css');
+@import url('./__container/tehnologies__container.css');
+
+.tehnologies {
+  background: #F5F6F7;
+  display: flex;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  .tehnologies {
+    flex-direction: column;
+  }
+}

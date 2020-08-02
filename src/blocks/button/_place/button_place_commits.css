@@ -1,0 +1,21 @@
+.button_place_commits {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #1A1B22;
+  width: 100%;
+}
+
+.button_place_commits:hover {
+  opacity: 0.9;
+  box-shadow: 0px 1px 2px #000000;
+}
+
+@media screen and (max-width: 680px) {
+  .button_place_commits {
+    display: flex;
+  }
+}

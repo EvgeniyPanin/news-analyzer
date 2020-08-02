@@ -1,0 +1,19 @@
+@import url('./__title/technology__title.css');
+
+.technology {
+  position: relative;
+  width: 120px;
+  height: 153px;
+  margin-right: 40px;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+}
+
+.technology:last-of-type {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .technology {
+    margin-right: 0;
+  }
+}

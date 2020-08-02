@@ -1,0 +1,18 @@
+.commits__button-container {
+  display: none;
+  padding: 0 40px;
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 680px) {
+  .commits__button-container {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .commits__button-container {
+    margin-top: 22px;
+    padding: 0 16px;
+  }
+}

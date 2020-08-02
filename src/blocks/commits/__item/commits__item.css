@@ -1,0 +1,25 @@
+.commits__item {
+  margin-right: 16px;
+  flex: none;
+  width: calc((100% - 32px) / 3);
+  box-sizing: border-box;
+  /* position: relative; */
+  /* right: calc(100% + 16px); */
+}
+
+.commits__item:last-of-type {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1250px) {
+  .commits__item {
+    width: calc((100% - 16px) / 2);
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .commits__item {
+    width: 100%;
+  }
+}

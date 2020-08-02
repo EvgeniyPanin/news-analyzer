@@ -1,0 +1,21 @@
+.search-section__title {
+  font-size: 60px;
+  line-height: 64px;
+  font-weight: normal;
+  margin: 0;
+  font-family: 'Roboto Slab', 'Roboto', 'Inter', 'Arial Narrow Bold', sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+  .search-section__title {
+    max-width: 70%;
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .search-section__title {
+    max-width: 80%;
+  }
+}

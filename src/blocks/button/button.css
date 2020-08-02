@@ -1,0 +1,19 @@
+.button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  background: #fff;
+  min-height: 64px;
+  border-radius: 80px;
+  border: none;
+  width: 288px;
+  color: #1A1B22;
+}
+
+@media screen and (max-width: 1024px) {
+  .button {
+    min-height: 58px;
+  }
+}

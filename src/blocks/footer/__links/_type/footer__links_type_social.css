@@ -1,0 +1,18 @@
+.footer__links_type_social {
+
+}
+
+@media screen and (max-width: 768px) {
+  .footer__links_type_social {
+    position: absolute;
+    top: 22px;
+    right: 42px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .footer__links_type_social {
+    top: 22px;
+    right: 18px;
+  }
+}

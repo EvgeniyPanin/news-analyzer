@@ -1,0 +1,17 @@
+.commit-card__user-container {
+  margin: 12px 0 13px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .commit-card__user-container {
+    margin: 15px 0 14px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .commit-card__user-container {
+    margin: 8px 0 14px;
+  }
+}

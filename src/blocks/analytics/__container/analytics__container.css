@@ -1,0 +1,26 @@
+.analytics__container {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 8.5% 91.5%;
+  grid-auto-rows: minmax(42px, auto);
+}
+
+@media screen and (max-width: 1024px) {
+  .analytics__container {
+    grid-template-columns: 12% 88%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .analytics__container {
+    grid-template-columns: 17% 83%;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .analytics__container {
+    margin-top: 12px;
+    grid-template-columns: 28% 72%;
+  }
+}

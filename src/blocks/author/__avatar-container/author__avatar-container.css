@@ -1,0 +1,36 @@
+.author__avatar-container {
+  width: 37.7%;
+  padding-bottom: 37.7%;
+  align-self: center;
+  height: fit-content;
+  position: relative;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .author__avatar-container {
+    width: 33.5%;
+    padding-bottom: 33.5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .author__avatar-container {
+    width: 50%;
+    padding-bottom: 50%;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .author__avatar-container {
+    width: 74%;
+    padding-bottom: 74%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .author__avatar-container {
+    width: 95.5%;
+    padding-bottom: 95.5%;
+  }
+}

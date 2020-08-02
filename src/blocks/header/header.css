@@ -1,0 +1,25 @@
+@import url('./__logo/header__logo.css');
+
+.header {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 1px;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+      min-height: 64px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .header {
+    min-height: 56px;
+  }
+}

@@ -1,0 +1,12 @@
+.footer__link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 540px) {
+  .footer__link {
+    font-family: 'Source Sans Pro', 'Inter', 'Arial Narrow Bold', sans-serif;
+  }
+}

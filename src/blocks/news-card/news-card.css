@@ -1,0 +1,32 @@
+@import url('./__photo-container/news-card__photo-container.css');
+@import url('./__photo/news-card__photo.css');
+@import url('./__content-container/news-card__content-container.css');
+@import url('./__date/news-card__date.css');
+@import url('./__title/news-card__title.css');
+@import url('./__paragraph/news-card__paragraph.css');
+@import url('./__label/news-card__label.css');
+
+.news-card {
+  border-radius: 8px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+  transition: .2s;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+}
+
+.news-card:hover {
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(212, 212, 212, 0.66);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(212, 212, 212, 0.66);
+  box-shadow: 4px 4px 8px 0px rgba(212, 212, 212, 0.66);
+}
+
+@media screen and (max-width: 485px) {
+  .news-card {
+    border-radius: 15px;
+  }
+}

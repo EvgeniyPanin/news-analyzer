@@ -1,0 +1,29 @@
+.footer__link-container {
+  margin-left: 40px;
+  transition: .3s;
+}
+
+.footer__link-container:first-of-type {
+  margin-left: 0;
+}
+
+.footer__link-container:hover {
+  opacity: .7;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer__link-container {
+    margin-left: 25px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .footer__link-container {
+    margin: 24px 0 0;
+  }
+
+  .footer__link-container:first-of-type {
+    margin: 0 0 0;
+  }
+}
+

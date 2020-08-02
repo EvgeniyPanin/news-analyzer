@@ -1,0 +1,15 @@
+.commits__slider-button {
+  /* width: 40px; */
+  /* height: 40px; */
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media screen and (max-width: 1250px) {
+  .commits__slider-button {
+    display: none;
+  }
+}

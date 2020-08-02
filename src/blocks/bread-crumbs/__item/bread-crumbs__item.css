@@ -1,0 +1,7 @@
+.bread-crumbs__item {
+  margin-right: 4px;
+}
+
+.bread-crumbs__item:last-of-type {
+  margin-right: 0;
+}

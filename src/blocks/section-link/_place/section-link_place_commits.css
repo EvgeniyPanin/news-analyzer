@@ -1,0 +1,24 @@
+.section-link_place_commits {
+  top: 75px;
+  right: 113px;
+}
+
+@media screen and (max-width: 1024px) {
+  .section-link_place_commits {
+    top: 35px;
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .section-link_place_commits {
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .section-link_place_commits {
+    display: none;
+  }
+}
+

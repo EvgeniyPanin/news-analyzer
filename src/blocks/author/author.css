@@ -1,0 +1,18 @@
+@import url('./__avatar-container/author__avatar-container.css');
+@import url('./__avatar/author__avatar.css');
+@import url('./__description/author__description.css');
+@import url('./__title/author__title.css');
+@import url('./__paragraph/author__paragraph.css');
+
+.author {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  .author {
+    flex-direction: column;
+  }
+}

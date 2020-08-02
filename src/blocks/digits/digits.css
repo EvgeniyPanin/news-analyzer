@@ -1,0 +1,16 @@
+@import url('./__title/digits__title.css');
+@import url('./__paragraph/digits__paragraph.css');
+@import url('./__week-digit/digits__week-digit.css');
+@import url('./__title-digit/digits__title-digit.css');
+
+.digits {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Roboto', 'Roboto Slab', 'Inter', 'Arial Narrow Bold', sans-serif;
+}
+
+@media screen and (max-width: 485px) {
+  .digits {
+    padding-top: 18px;
+  }
+}

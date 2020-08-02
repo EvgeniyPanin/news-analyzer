@@ -1,0 +1,8 @@
+.commit-card__user-avatar-container {
+  display: block;
+  flex-shrink: 0;
+  width: 18.2%;
+  padding-bottom: 18.2%;
+  height: fit-content;
+  position: relative;
+}
