@@ -1,4 +1,4 @@
-# [Анализатор новостей](https://github.com/EvgeniyPanin/news-analyzer)
+# [Анализатор новостей](https://evgeniypanin.github.io/news-analyzer/)
 
 ---
 
