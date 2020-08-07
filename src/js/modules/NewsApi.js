@@ -8,11 +8,11 @@ class NewsApi {
 
   getNews = (word) => {
     const currentDate = this._buildCurrentDate();
-    const oneWeekAgoDate =this._buildOneWeekAgoDate();
-    return fetch(`${this.apiURL}?q=${word}&to=${currentDate}&from=${oneWeekAgoDate}`, {
+    const oneWeekAgoDate = this._buildOneWeekAgoDate();
+    return fetch(`${this.apiURL}?q=${word}&to=${currentDate}&from=${oneWeekAgoDate}&pageSize=${this.pageSize}`, {
       method: 'GET',
       headers: {
-        authorization: 'd55b1fd0021e412ba0db91f165f8912a',
+        authorization: this.apiKey,
       }
     }).then((res) => res.json())
   }
