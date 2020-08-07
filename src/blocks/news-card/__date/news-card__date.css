@@ -2,12 +2,19 @@
   display: inline-block;
   font-size: 18px;
   line-height: 24px;
+  margin: 16px 24px 0;
   color: #B6BCBF;
   font-family: 'Source Sans Pro', 'Roboto', 'Inter', 'Arial Narrow Bold', sans-serif;
 }
 
+@media screen and (max-width: 1024px) {
+  .news-card__date {
+    margin: 13px 16px 0;
+  }
+}
+
 @media screen and (max-width: 485px) {
   .news-card__date {
-    margin-top: 2px;
+    margin: 15px 16px 0;
   }
 }

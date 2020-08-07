@@ -3,20 +3,26 @@
   line-height: 30px;
   font-family: 'Roboto Slab', 'Roboto', 'Inter', 'Arial Narrow Bold', sans-serif;
   font-weight: normal;
-  margin: 14px 0 16px;
+  margin: 14px 24px 16px;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media screen and (max-width: 1024px) {
   .news-card__title {
     font-size: 22px;
     line-height: 24px;
-    margin: 15px 0 9px;
+    margin: 15px 16px 9px;
   }
 }
 
 @media screen and (max-width: 485px) {
   .news-card__title {
     line-height: 26px;
-    margin: 17px 0 9px;
+    margin: 17px 16px 9px;
   }
 }

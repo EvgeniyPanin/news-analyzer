@@ -1,7 +1,17 @@
 .news-card__paragraph {
   font-size: 16px;
   line-height: 22px;
-  margin: 0;
+  margin: 0 24px;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1024px) {
+  .news-card__paragraph {
+    margin: 0 16px;
+  }
 }

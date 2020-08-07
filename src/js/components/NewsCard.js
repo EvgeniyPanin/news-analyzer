@@ -1,0 +1,25 @@
+class NewsCard {
+  constructor(card, newsData) {
+    this._card = card;
+    this._cardLink = card.querySelector('.news-card');
+    this._photo = card.querySelector('.news-card__photo');
+    this._date = card.querySelector('.news-card__date');
+    this._title = card.querySelector('.news-card__title');
+    this._paragraph = card.querySelector('.news-card__paragraph');
+    this._label = card.querySelector('.news-card__label');
+    this._newsData = newsData;
+  }
+
+  create = () => {
+    this._cardLink.href = this._newsData.url;
+    this._photo.src = this._newsData.urlToImage;
+    this._date.textContent = this._newsData.publishedAt;
+    this._title.textContent = this._newsData.title;
+    this._paragraph.textContent = this._newsData.description;
+    this._label.textContent = this._newsData.source.name;
+
+    return this._card;
+  }
+}
+
+export default NewsCard;

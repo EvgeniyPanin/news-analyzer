@@ -61,27 +61,25 @@
       </p>
     </div>
   </section>
-  <section class='section news news_active'>
+  <section class='section news'>
     <h2 class='news__title'>Результаты поиска</h2>
     <a class='section-link' href='./analytics.html'>Посмотреть аналитику <span class='section-link__span'>&rsaquo;</span></a>
     <ul class='news__cards-container'>
+
       <template id='card-template' style='display: none;'>
-        <li>
-          <a class='news-card' href='https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki/' target='_blank'>
+        <li class='news__item'>
+          <a class='news-card' href='' target='_blank'>
             <span class='news-card__photo-container'>
-              <img class='news-card__photo' src="<%=require('./images/image_08.jpg').default%>" alt="Обложка новости">
+              <img class='news-card__photo' src="" alt="Обложка новости">
             </span>
-            <div class='news-card__content-container'>
-              <span class='news-card__date'>2 августа, 2019</span>
-              <h3 class='news-card__title'>Национальное достояние – парки</h3>
-              <p class='news-card__paragraph'>
-                В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-              </p>
-              <span class='news-card__label'>Лента.ру</span>
-            </div>
+              <span class='news-card__date'></span>
+              <h3 class='news-card__title'></h3>
+              <p class='news-card__paragraph'></p>
+              <span class='news-card__label'></span>
           </a>
         </li>
       </template>
+
     </ul>
     <button class='button button_place_news'>Показать еще</button>
   </section>
