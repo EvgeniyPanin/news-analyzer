@@ -2,9 +2,10 @@ import './index.css';
 import NewsApi from './js/modules/NewsApi';
 import DataStorage from './js/modules/DataStorage';
 import Preloader from './js/components/Preloader';
-import {newsApiConfig} from './js/constants/newsApiConfig';
+import {NEWS_API_CONFIG} from './js/constants/NEWS_API_CONFIG';
 import {buildCurrentDate} from './js/utils/buildCurrentDate';
 import {buildOneWeekAgoDate} from './js/utils/buildOneWeekAgoDate';
+import {buildNewsCardDate} from './js/utils/buildNewsCardDate';
 import {createNewsCardsArr} from './js/utils/createNewsCardsArr';
 import NewsCardList from './js/components/NewsCardList';
 import NewsCard from './js/components/NewsCard';
@@ -23,7 +24,7 @@ const newsList = new NewsCardList(newsSection, cardsContainer, paginationButton)
 
 preloader.togglePreloader(true);
 preloader.toggleSearchLoader(true);
-const newsApi = new NewsApi(newsApiConfig);
+const newsApi = new NewsApi(NEWS_API_CONFIG);
 newsApi.getNews('Беларусь', buildCurrentDate(), buildOneWeekAgoDate())
   .then((res) => {
     const newsArr = res.articles
@@ -35,7 +36,7 @@ newsApi.getNews('Беларусь', buildCurrentDate(), buildOneWeekAgoDate())
       preloader.togglePreloader(false);
       preloader.toggleSearchLoader(false);
       newsList.toggleNewsSection(true);
-      const newsCardsArr = createNewsCardsArr(newsArr, cardTemplate, NewsCard);
+      const newsCardsArr = createNewsCardsArr(newsArr, cardTemplate, NewsCard, buildNewsCardDate);
       newsList.render(newsCardsArr);
     }
   });

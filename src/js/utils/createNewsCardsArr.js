@@ -1,6 +1,8 @@
-export const createNewsCardsArr = (newsArr, cardTemplate, NewsCard) => {
+export const createNewsCardsArr = (newsArr, cardTemplate, NewsCard, buildNewsCardDate) => {
   return newsArr.map(news => {
     const card = cardTemplate.cloneNode('true').content.querySelector('li');
-    return new NewsCard(card, news).create();
+    const date = new Date(news.publishedAt);
+    console.log(date.getFullYear())
+    return new NewsCard(card, news, buildNewsCardDate).create();
   })
 }
