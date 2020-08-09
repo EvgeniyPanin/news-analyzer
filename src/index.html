@@ -36,8 +36,16 @@
           Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
         </p>
         <form name='search' class='search-form'>
-          <input type='text' class='search-form__input' placeholder='Введите тему новости' required>
-          <button class='button button_place_search-form'>Искать</button>
+          <input name='input'
+           type='text'
+           class='search-form__input'
+           placeholder='Введите тему новости'
+           minlength="2"
+           maxlength="30"
+           required
+           novalidate>
+           <span class='search-form__error'></span>
+          <button class='button button_place_search-form button_disabled' disabled>Искать</button>
         </form>
       </div>
     </section>

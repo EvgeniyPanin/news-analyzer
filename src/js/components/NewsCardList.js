@@ -16,6 +16,10 @@ class NewsCardList {
       this._cardsContainer.appendChild(card);
     })
   }
+
+  clear = () => {
+    this._cardsContainer.innerHTML = '';
+  }
 }
 
 export default NewsCardList;
