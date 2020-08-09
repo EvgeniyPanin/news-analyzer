@@ -12,9 +12,11 @@ class NewsCard {
   }
 
   create = () => {
-    this._cardLink.href = this._newsData.url;
-    this._photo.src = this._newsData.urlToImage;
+    if (this._newsData.urlToImage) {
+      this._photo.src = this._newsData.urlToImage;
+    }
     this._date.textContent = this.buildNewsCardDate(this._newsData.publishedAt);
+    this._cardLink.href = this._newsData.url;
     this._title.textContent = this._newsData.title;
     this._paragraph.textContent = this._newsData.description;
     this._label.textContent = this._newsData.source.name;
