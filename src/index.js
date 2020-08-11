@@ -36,6 +36,8 @@ const newsList = new NewsCardList(
 
 function searchNews(word) {
   newsList.clear();
+  newsList.toggleNewsSection(false);
+  newsList.togglePaginationButton(true);
   preloader.toggleNotFoundItem(false);
   preloader.togglePreloader(true);
   preloader.toggleSearchLoader(true);
@@ -57,10 +59,10 @@ function searchNews(word) {
           NewsCard,
           buildNewsCardDate
         );
-        newsList.render(newsCardsArr);
+        newsList.setFullCardsArr(newsCardsArr);
+        newsList.pagination();
       }
     });
 }
 
 const search = new SearchInput(searchForm, ERROR_MESSAGES, searchNews);
-console.log(search);

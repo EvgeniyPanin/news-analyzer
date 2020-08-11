@@ -9,13 +9,9 @@ class SearchInput {
     this._setEventListeners();
   }
 
-  _isValidity = (input) => {
-
-  }
-
   _checkFormValidity(input) {
     input.setCustomValidity("");
-    console.log(input.validity.valueMissing)
+
     if (input.validity.valueMissing) {
       input.setCustomValidity(this._ERROR_MESSAGES.emptyString);
       return false
@@ -33,14 +29,14 @@ class SearchInput {
     this._errorItem.textContent = field.validationMessage;
   }
 
-  handlerInputForm = (evt) => {
+  _handlerInputForm = (evt) => {
     const valid = this._checkFormValidity(this._input);
     this._toggleInputError(this._input);
 
     this._setSubmitButtonState(valid);
   }
 
-  handlerSubmitForm = (evt) => {
+  _handlerSubmitForm = (evt) => {
     evt.preventDefault();
     const word = this._input.value;
     this._searchNews(word);
@@ -57,17 +53,8 @@ class SearchInput {
   }
 
   _setEventListeners() {
-    this._input.addEventListener('input', this.handlerInputForm);
-    this._form.addEventListener('submit', this.handlerSubmitForm);
-
-    /* const cleanErrors = () => {
-      for (let key in this.errorsObj) {
-        this.form.reset();
-        this.errorsObj[key].textContent = '';
-      }
-    }
-
-    return cleanErrors; */
+    this._input.addEventListener('input', this._handlerInputForm);
+    this._form.addEventListener('submit', this._handlerSubmitForm);
   }
 }
 

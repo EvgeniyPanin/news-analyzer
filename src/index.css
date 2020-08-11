@@ -11,6 +11,7 @@
 @import url('./blocks/button/_place/button_place_search-form.css');
 @import url('./blocks/button/_disabled/button_disabled.css');
 @import url('./blocks/button/_place/button_place_news.css');
+@import url('./blocks/button/_show/button_show.css');
 @import url('./blocks/illustration/illustration.css');
 @import url('./blocks/preloader/preloader.css');
 @import url('./blocks/preloader/_active/preloader_active.css');

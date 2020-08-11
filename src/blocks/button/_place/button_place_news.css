@@ -1,5 +1,6 @@
 .button_place_news {
   align-self: center;
+  display: none;
 }
 
 .button_place_news:hover {
