@@ -15,7 +15,7 @@ class CommitCard {
     this._avatar.src = this._commitData.author.avatar_url;
     this._name.textContent = this._commitData.commit.committer.name;
     this._date.textContent = this.buildNewsCardDate(this._commitData.commit.committer.date);
-    this._cardLink.href = this._commitData.committer.html_url;
+    this._cardLink.href = this._commitData.html_url;
     this._email.textContent = this._commitData.commit.committer.email;
     this._message.textContent = this._commitData.commit.message;
 
