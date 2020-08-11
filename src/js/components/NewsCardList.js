@@ -32,6 +32,12 @@ class NewsCardList {
     }
   }
 
+  initRender = (newsCardsArr) => {
+    this.toggleNewsSection(true);
+    this.setFullCardsArr(newsCardsArr);
+    this.pagination();
+  }
+
   _render = (cards) => {
     console.log(cards)
     cards.forEach(card => {

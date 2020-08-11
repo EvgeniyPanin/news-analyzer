@@ -1,5 +1,5 @@
 import Swiper from 'swiper/bundle';
-import 'swiper/swiper-bundle.css';
+// import 'swiper/swiper-bundle.css';
 import './about.css';
 
 const mySwiper = new Swiper('.commits__slider-container', {

@@ -34,6 +34,7 @@ const newsList = new NewsCardList(
   paginationButton
 );
 
+// функция, описывающая логику поиска, прелоудера и отрисовывающая первые 3 карточки
 function searchNews(word) {
   newsList.clear();
   newsList.toggleNewsSection(false);
@@ -46,23 +47,37 @@ function searchNews(word) {
     .then((res) => {
       const newsArr = res.articles;
       localStore.setDataNews(newsArr);
+      localStore.setSearchWord(word);
       if (newsArr.length === 0) {
         preloader.toggleSearchLoader(false);
         preloader.toggleNotFoundItem(true);
       } else {
         preloader.togglePreloader(false);
         preloader.toggleSearchLoader(false);
-        newsList.toggleNewsSection(true);
         const newsCardsArr = createNewsCardsArr(
           newsArr,
           cardTemplate,
           NewsCard,
           buildNewsCardDate
         );
-        newsList.setFullCardsArr(newsCardsArr);
-        newsList.pagination();
+        newsList.initRender(newsCardsArr);
       }
     });
 }
 
 const search = new SearchInput(searchForm, ERROR_MESSAGES, searchNews);
+
+// если в локальном хранилище записаны данные, отрисовываем их на странице
+const localCardsDataArr = localStore.pullDataNews();
+
+if (localCardsDataArr) {
+  const newsCardsArr = createNewsCardsArr(
+    localCardsDataArr,
+    cardTemplate,
+    NewsCard,
+    buildNewsCardDate
+  );
+  search.setInputContent(localStore.pullSearchWord());
+  search.handlerInputForm();
+  newsList.initRender(newsCardsArr);
+}

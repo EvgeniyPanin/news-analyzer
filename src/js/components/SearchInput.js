@@ -29,7 +29,7 @@ class SearchInput {
     this._errorItem.textContent = field.validationMessage;
   }
 
-  _handlerInputForm = (evt) => {
+  handlerInputForm = () => {
     const valid = this._checkFormValidity(this._input);
     this._toggleInputError(this._input);
 
@@ -53,8 +53,12 @@ class SearchInput {
   }
 
   _setEventListeners() {
-    this._input.addEventListener('input', this._handlerInputForm);
+    this._input.addEventListener('input', this.handlerInputForm);
     this._form.addEventListener('submit', this._handlerSubmitForm);
+  }
+
+  setInputContent = (content) => {
+    this._input.value = content;
   }
 }
 
