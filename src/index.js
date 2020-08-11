@@ -42,10 +42,12 @@ function searchNews(word) {
   preloader.toggleNotFoundItem(false);
   preloader.togglePreloader(true);
   preloader.toggleSearchLoader(true);
+  search.setSubmitButtonState(false);
   newsApi
     .getNews(word, buildCurrentDate(), buildOneWeekAgoDate())
     .then((res) => {
       const newsArr = res.articles;
+      search.setSubmitButtonState(true);
       localStore.setDataNews(newsArr);
       localStore.setSearchWord(word);
       if (newsArr.length === 0) {
@@ -69,7 +71,6 @@ const search = new SearchInput(searchForm, ERROR_MESSAGES, searchNews);
 
 // если в локальном хранилище записаны данные, отрисовываем их на странице
 const localCardsDataArr = localStore.pullDataNews();
-
 if (localCardsDataArr) {
   const newsCardsArr = createNewsCardsArr(
     localCardsDataArr,

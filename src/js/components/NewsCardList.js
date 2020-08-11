@@ -7,7 +7,7 @@ class NewsCardList {
     this._setHandlers();
   }
 
-  setFullCardsArr = (fullCardsArr) => {
+  _setFullCardsArr = (fullCardsArr) => {
     this._fullCards = fullCardsArr;
   }
 
@@ -21,7 +21,7 @@ class NewsCardList {
       this._newsSection.classList.remove('news_active');
   }
 
-  pagination = () => {
+  _pagination = () => {
     const renderCards = [];
     for (let i = 0; i<3; i++) {
       renderCards.push(this._fullCards.pop())
@@ -34,17 +34,15 @@ class NewsCardList {
 
   initRender = (newsCardsArr) => {
     this.toggleNewsSection(true);
-    this.setFullCardsArr(newsCardsArr);
-    this.pagination();
+    this._setFullCardsArr(newsCardsArr);
+    this._pagination();
   }
 
   _render = (cards) => {
-    console.log(cards)
     cards.forEach(card => {
       if (card) {
         this._cardsContainer.appendChild(card);
       }
-
     })
   }
 
@@ -53,7 +51,7 @@ class NewsCardList {
   }
 
   _setHandlers = () => {
-    this._paginationButton.addEventListener('click', this.pagination);
+    this._paginationButton.addEventListener('click', this._pagination);
   }
 
   togglePaginationButton = (state) => {

@@ -33,7 +33,7 @@ class SearchInput {
     const valid = this._checkFormValidity(this._input);
     this._toggleInputError(this._input);
 
-    this._setSubmitButtonState(valid);
+    this.setSubmitButtonState(valid);
   }
 
   _handlerSubmitForm = (evt) => {
@@ -42,7 +42,7 @@ class SearchInput {
     this._searchNews(word);
   }
 
-  _setSubmitButtonState(state) {
+  setSubmitButtonState(state) {
     if (state) {
       this._button.removeAttribute('disabled');
       this._button.classList.remove('button_disabled');
