@@ -5,7 +5,7 @@ import Preloader from "./js/components/Preloader";
 import { NEWS_API_CONFIG } from "./js/constants/NEWS_API_CONFIG";
 import { buildCurrentDate } from "./js/utils/buildCurrentDate";
 import { buildOneWeekAgoDate } from "./js/utils/buildOneWeekAgoDate";
-import { buildNewsCardDate } from "./js/utils/buildNewsCardDate";
+import { buildCardDate } from "./js/utils/buildCardDate";
 import { createNewsCardsArr } from "./js/utils/createNewsCardsArr";
 import { ERROR_MESSAGES } from "./js/constants/ERROR_MESSAGES";
 import NewsCardList from "./js/components/NewsCardList";
@@ -60,7 +60,7 @@ function searchNews(word) {
           newsArr,
           cardTemplate,
           NewsCard,
-          buildNewsCardDate
+          buildCardDate
         );
         newsList.initRender(newsCardsArr);
       }
@@ -76,7 +76,7 @@ if (localCardsDataArr) {
     localCardsDataArr,
     cardTemplate,
     NewsCard,
-    buildNewsCardDate
+    buildCardDate
   );
   search.setInputContent(localStore.pullSearchWord());
   search.handlerInputForm();
