@@ -1,11 +1,11 @@
 class Statistics {
-  constructor({localStore, digitsTitle, totalResults, mentionsTitle, DAYS_ARR}) {
-      this.weekDays = DAYS_ARR;
+  constructor({localStore, digitsTitle, totalResults, mentionsTitle, createAnaliticsDate}) {
       this._localStore = localStore;
       this._digitsTitle = digitsTitle;
       this._totalResults = totalResults;
       this._mentionsTitle = mentionsTitle;
       this._newsArr = this._localStore.pullDataNews();
+      this._createAnaliticsDate = createAnaliticsDate;
       this._analytics = this._createAnalytics(this._newsArr);
       console.log(this._analytics)
   }
@@ -34,7 +34,7 @@ class Statistics {
     }, 0);
   }
 
-  // конструирует объект с данными аналитики
+  // конструирует массив с данными аналитики
   _createAnalytics = (newsArr) => {
     let datesArr =[];
 
@@ -55,7 +55,7 @@ class Statistics {
 
     // приводим даты в массиве к нужному в разметке виду
     datesArr = datesArr.map(date => {
-      return this.createAnaliticsDate(date);
+      return this._createAnaliticsDate(date);
     })
 
     // преобразуем массив c датами в массив объектов содержащих данные для каждой уникальной даты
@@ -68,7 +68,7 @@ class Statistics {
         })
         return acc;
       } else {
-        return [...acc, {date, totalCount: 1, proportion: null}];
+        return [...acc, {date, totalCount: 1}];
       }
     }, [])
 
@@ -85,12 +85,17 @@ class Statistics {
     return datesArr;
   }
 
-  createAnaliticsDate = (date) => {
-    return `${date.getDate()}, ${this.weekDays[date.getDay()]}`
-  }
+  render = ({datesContainer, dateTemplate, chartsContainer, chartTemplate}) => {
+    this._analytics.forEach(item => {
+      const dateItem = dateTemplate.cloneNode('true');
+      dateItem.textContent = item.date;
 
-  render = (datesContainer, dateItem, chartsContainer, chartItem) => {
-
+      datesContainer.appendChild(dateItem);
+      const chartItem = chartTemplate.cloneNode('true');
+      chartItem.textContent = item.totalCount;
+      chartItem.style.width = item.width;
+      chartsContainer.appendChild(chartItem);
+    })
   }
 }
 
