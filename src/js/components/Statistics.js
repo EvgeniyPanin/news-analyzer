@@ -1,19 +1,13 @@
 class Statistics {
-  constructor({localStore, digitsTitle, totalResults, mentionsTitle}) {
-    this.weekDays = [
-      'вс',
-      'пн',
-      'вт',
-      'ср',
-      'чт',
-      'пт',
-      'сб',
-    ];
+  constructor({localStore, digitsTitle, totalResults, mentionsTitle, DAYS_ARR}) {
+      this.weekDays = DAYS_ARR;
       this._localStore = localStore;
       this._digitsTitle = digitsTitle;
       this._totalResults = totalResults;
       this._mentionsTitle = mentionsTitle;
-      console.log(this._createDateArr(this._localStore.pullDataNews()));
+      this._newsArr = this._localStore.pullDataNews();
+      this._analytics = this._createAnalytics(this._newsArr);
+      console.log(this._analytics)
   }
 
   setDigitsTitle = () => {
@@ -40,11 +34,16 @@ class Statistics {
     }, 0);
   }
 
-  _createDateArr = (newsArr) => {
+  // конструирует объект с данными аналитики
+  _createAnalytics = (newsArr) => {
     let datesArr =[];
+
+    // наполняем массив датами
     newsArr.forEach(news => {
       datesArr.push(new Date(news.publishedAt))
     });
+
+    // сортируем массив в хронологическом порядке
     datesArr.sort((a, b) => {
       if (a > b) {
         return 1;
@@ -53,23 +52,45 @@ class Statistics {
       }
       return 0;
     })
+
+    // приводим даты в массиве к нужному в разметке виду
     datesArr = datesArr.map(date => {
       return this.createAnaliticsDate(date);
     })
+
+    // преобразуем массив c датами в массив объектов содержащих данные для каждой уникальной даты
     datesArr = datesArr.reduce((acc, date) => {
-      if (acc[date] || acc[date] === 0) {
-        acc[date] = acc[date] + 1;
+      if (acc.some(item => item.date === date)) {
+        acc.forEach(item => {
+          if(item.date === date) {
+            item.totalCount = item.totalCount + 1;
+          }
+        })
         return acc;
       } else {
-        acc[date] = 0;
-        return acc;
+        return [...acc, {date, totalCount: 1, proportion: null}];
       }
-    }, {})
+    }, [])
+
+    // Вычислием проценты ширины для каждой диаграммы
+    let maximum = 0;
+    datesArr.forEach(item => {
+      if (item.totalCount > maximum) {
+        maximum = item.totalCount;
+      }
+    })
+    datesArr.forEach(item => {
+      item.width = `${item.totalCount / maximum * 100}%`
+    })
     return datesArr;
   }
 
   createAnaliticsDate = (date) => {
     return `${date.getDate()}, ${this.weekDays[date.getDay()]}`
+  }
+
+  render = (datesContainer, dateItem, chartsContainer, chartItem) => {
+
   }
 }
 
