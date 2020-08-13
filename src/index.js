@@ -50,6 +50,7 @@ function searchNews(word) {
       search.setSubmitButtonState(true);
       localStore.setDataNews(newsArr);
       localStore.setSearchWord(word);
+      localStore.setTotalResults(res.totalResults);
       if (newsArr.length === 0) {
         preloader.toggleSearchLoader(false);
         preloader.toggleNotFoundItem(true);
