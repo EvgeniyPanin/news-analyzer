@@ -7,7 +7,6 @@ class Statistics {
       this._newsArr = this._localStore.pullDataNews();
       this._createAnaliticsDate = createAnaliticsDate;
       this._analytics = this._createAnalytics(this._newsArr);
-      console.log(this._analytics)
   }
 
   setDigitsTitle = () => {
@@ -34,6 +33,17 @@ class Statistics {
     }, 0);
   }
 
+  _createAccumArray = () => {
+    const currentDate = new Date(this._localStore.pullCurrentDate());
+    const arr = [];
+    for (let i=6; i >= 0; i--) {
+      const date = new Date(currentDate)
+      date.setDate(date.getDate() - i)
+      arr.push({date: this._createAnaliticsDate(date), totalCount: 0})
+    }
+    return arr;
+  }
+
   // конструирует массив с данными аналитики
   _createAnalytics = (newsArr) => {
     let datesArr =[];
@@ -58,6 +68,9 @@ class Statistics {
       return this._createAnaliticsDate(date);
     })
 
+    // собираем массив с объектами дат, который послужит основой редюсера
+    const accumArray =  this._createAccumArray();
+
     // преобразуем массив c датами в массив объектов содержащих данные для каждой уникальной даты
     datesArr = datesArr.reduce((acc, date) => {
       if (acc.some(item => item.date === date)) {
@@ -70,7 +83,7 @@ class Statistics {
       } else {
         return [...acc, {date, totalCount: 1}];
       }
-    }, [])
+    }, accumArray)
 
     // Вычислием проценты ширины для каждой диаграммы
     let maximum = 0;
@@ -85,17 +98,8 @@ class Statistics {
     return datesArr;
   }
 
-  render = ({datesContainer, dateTemplate, chartsContainer, chartTemplate}) => {
-    this._analytics.forEach(item => {
-      const dateItem = dateTemplate.cloneNode('true');
-      dateItem.textContent = item.date;
-
-      datesContainer.appendChild(dateItem);
-      const chartItem = chartTemplate.cloneNode('true');
-      chartItem.textContent = item.totalCount;
-      chartItem.style.width = item.width;
-      chartsContainer.appendChild(chartItem);
-    })
+  getAnalytics = () => {
+    return this._analytics;
   }
 }
 

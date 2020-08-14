@@ -24,4 +24,18 @@ const statistics = new Statistics({
 statistics.setDigitsTitle();
 statistics.setTotalResults();
 statistics.setMentionsTitle();
-statistics.render({datesContainer, dateTemplate, chartsContainer, chartTemplate})
+
+// рендерим аналитические графики на страницу
+  statistics.getAnalytics().forEach(item => {
+    const dateItem = dateTemplate.cloneNode('true');
+    dateItem.textContent = item.date;
+    datesContainer.appendChild(dateItem);
+
+    const chartItem = chartTemplate.cloneNode('true');
+    if (item.totalCount !== 0) {
+      chartItem.textContent = item.totalCount
+    };
+    chartItem.style.width = item.width;
+    chartsContainer.appendChild(chartItem);
+  })
+

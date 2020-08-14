@@ -15,6 +15,10 @@ class DataStorage {
     localStorage.setItem('totalResults', JSON.stringify(totalResults));
   }
 
+  setcurrentDate = (date) => {
+    localStorage.setItem('currentDate', JSON.stringify(date));
+  }
+
   pullDataNews = () => {
     return JSON.parse(localStorage.getItem('news'));
   }
@@ -25,6 +29,10 @@ class DataStorage {
 
   pullTotalResults = () => {
     return JSON.parse(localStorage.getItem('totalResults'));
+  }
+
+  pullCurrentDate = () => {
+    return JSON.parse(localStorage.getItem('currentDate'));
   }
 }
 

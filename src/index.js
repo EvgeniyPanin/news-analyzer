@@ -43,14 +43,16 @@ function searchNews(word) {
   preloader.togglePreloader(true);
   preloader.toggleSearchLoader(true);
   search.setSubmitButtonState(false);
+  const currentDate = buildCurrentDate();
   newsApi
-    .getNews(word, buildCurrentDate(), buildOneWeekAgoDate())
+    .getNews(word, currentDate, buildOneWeekAgoDate())
     .then((res) => {
       const newsArr = res.articles;
       search.setSubmitButtonState(true);
       localStore.setDataNews(newsArr);
       localStore.setSearchWord(word);
       localStore.setTotalResults(res.totalResults);
+      localStore.setcurrentDate(currentDate);
       if (newsArr.length === 0) {
         preloader.toggleSearchLoader(false);
         preloader.toggleNotFoundItem(true);
