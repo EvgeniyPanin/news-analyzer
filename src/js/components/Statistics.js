@@ -1,11 +1,13 @@
 class Statistics {
-  constructor({localStore, digitsTitle, totalResults, mentionsTitle, createAnaliticsDate}) {
+  constructor({localStore, digitsTitle, totalResults, mentionsTitle, createAnaliticsDate, createMonth}) {
       this._localStore = localStore;
       this._digitsTitle = digitsTitle;
       this._totalResults = totalResults;
       this._mentionsTitle = mentionsTitle;
-      this._maxLevel = 0;
+      this._maxLevel = null;
+      this._months = [];
       this._newsArr = this._localStore.pullDataNews();
+      this._createMonth = createMonth;
       this._createAnaliticsDate = createAnaliticsDate;
       this._analytics = this._createAnalytics(this._newsArr);
   }
@@ -49,8 +51,13 @@ class Statistics {
   _createAnalytics = (newsArr) => {
     let datesArr =[];
 
-    // наполняем массив датами
+    // наполняем массив дат новостей и массив месяцев, которые захватила выборка
     newsArr.forEach(news => {
+      const month = this._createMonth(news.publishedAt);
+      if (!this._months.includes(month)) {
+        this._months.push(month)
+      }
+
       datesArr.push(this._createAnaliticsDate(new Date(news.publishedAt)))
     });
 
@@ -89,6 +96,10 @@ class Statistics {
 
   getMaxLevel = () => {
     return this._maxLevel;
+  }
+
+  getMonths = () => {
+    return this._months;
   }
 }
 

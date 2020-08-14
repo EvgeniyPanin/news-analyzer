@@ -3,6 +3,7 @@ import DataStorage from '../../js/modules/DataStorage';
 import Statistics from '../../js/components/Statistics';
 import {DAYS_ARR} from '../../js/constants/DAYS_ARR';
 import {createAnaliticsDate} from '../../js/utils/createAnaliticsDate';
+import {createMonth} from '../../js/utils/createMonth';
 
 const digitsTitle = document.querySelector('.digits__title');
 const totalResults = document.querySelector('.digits__week-digit');
@@ -14,6 +15,7 @@ const chartTemplate = document.querySelector('#diagram-template').content.queryS
 const chartDigitsTopContainer = document.querySelector('.analytics__number-container_place_top');
 const chartDigitsBottomContainer = document.querySelector('.analytics__number-container_place_bottom');
 const analyticsNumberTemplate = document.querySelector('#analytics-number').content.querySelector('p');
+const dateContainerTitle = document.querySelector('.analytics__column-title');
 
 const localStore = new DataStorage();
 const statistics = new Statistics({
@@ -22,7 +24,8 @@ const statistics = new Statistics({
   totalResults,
   mentionsTitle,
   DAYS_ARR,
-  createAnaliticsDate});
+  createAnaliticsDate,
+  createMonth});
 
 statistics.setDigitsTitle();
 statistics.setTotalResults();
@@ -71,4 +74,7 @@ for (let i=0; i <= 4; i++) {
 }
 chartDigitsTopContainer.insertAdjacentHTML("afterbegin", markupString);
 chartDigitsBottomContainer.insertAdjacentHTML("afterbegin", markupString);
+
+// рендерим месяцы охвата в заголовок таблицы
+dateContainerTitle.textContent = `Дата (${statistics.getMonths().join(', ')})`;
 
