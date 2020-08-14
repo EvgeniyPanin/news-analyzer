@@ -4,6 +4,7 @@ class Statistics {
       this._digitsTitle = digitsTitle;
       this._totalResults = totalResults;
       this._mentionsTitle = mentionsTitle;
+      this._maxLevel = 0;
       this._newsArr = this._localStore.pullDataNews();
       this._createAnaliticsDate = createAnaliticsDate;
       this._analytics = this._createAnalytics(this._newsArr);
@@ -50,28 +51,13 @@ class Statistics {
 
     // наполняем массив датами
     newsArr.forEach(news => {
-      datesArr.push(new Date(news.publishedAt))
+      datesArr.push(this._createAnaliticsDate(new Date(news.publishedAt)))
     });
-
-    // сортируем массив в хронологическом порядке
-    datesArr.sort((a, b) => {
-      if (a > b) {
-        return 1;
-      } else if (a < b) {
-        return -1;
-      }
-      return 0;
-    })
-
-    // приводим даты в массиве к нужному в разметке виду
-    datesArr = datesArr.map(date => {
-      return this._createAnaliticsDate(date);
-    })
 
     // собираем массив с объектами дат, который послужит основой редюсера
     const accumArray =  this._createAccumArray();
 
-    // преобразуем массив c датами в массив объектов содержащих данные для каждой уникальной даты
+    // редюсим в шаблонный массив данные по статистике за каждую дату
     datesArr = datesArr.reduce((acc, date) => {
       if (acc.some(item => item.date === date)) {
         acc.forEach(item => {
@@ -85,21 +71,24 @@ class Statistics {
       }
     }, accumArray)
 
-    // Вычислием проценты ширины для каждой диаграммы
-    let maximum = 0;
+    // Вычисляем проценты ширины для каждой диаграммы
     datesArr.forEach(item => {
-      if (item.totalCount > maximum) {
-        maximum = item.totalCount;
+      if (item.totalCount > this._maxLevel) {
+        this._maxLevel = item.totalCount;
       }
     })
     datesArr.forEach(item => {
-      item.width = `${item.totalCount / maximum * 100}%`
+      item.width = `${item.totalCount / this._maxLevel * 100}%`
     })
     return datesArr;
   }
 
   getAnalytics = () => {
     return this._analytics;
+  }
+
+  getMaxLevel = () => {
+    return this._maxLevel;
   }
 }
 

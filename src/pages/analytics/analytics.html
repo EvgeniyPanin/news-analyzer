@@ -60,22 +60,14 @@
       </div>
       <div id='diagrams' class='analytics__charts-container'>
         <div class='analytics__number-container analytics__number-container_place_top'>
-          <p class='analytics__number'>0</p>
-          <p class='analytics__number'>25</p>
-          <p class='analytics__number'>50</p>
-          <p class='analytics__number'>75</p>
-          <p class='analytics__number'>100</p>
+          <template id='analytics-number' style='display: none;'>
+            <p class='analytics__number'></p>
+          </template>
         </div>
         <template id='diagram-template' style='display: none;'>
           <p class='analytics__diagram' style='width: 20%'></p>
         </template>
-        <div class='analytics__number-container analytics__number-container_place_bottom'>
-          <p class='analytics__number'>0</p>
-          <p class='analytics__number'>25</p>
-          <p class='analytics__number'>50</p>
-          <p class='analytics__number'>75</p>
-          <p class='analytics__number'>100</p>
-        </div>
+        <div class='analytics__number-container analytics__number-container_place_bottom'></div>
       </div>
     </div>
   </section>
