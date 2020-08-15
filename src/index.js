@@ -2,15 +2,16 @@ import "./index.css";
 import NewsApi from "./js/modules/NewsApi";
 import DataStorage from "./js/modules/DataStorage";
 import Preloader from "./js/components/Preloader";
+import NewsCardList from "./js/components/NewsCardList";
+import NewsCard from "./js/components/NewsCard";
+import SearchInput from "./js/components/SearchInput";
 import { NEWS_API_CONFIG } from "./js/constants/NEWS_API_CONFIG";
 import { buildCurrentDate } from "./js/utils/buildCurrentDate";
 import { buildOneWeekAgoDate } from "./js/utils/buildOneWeekAgoDate";
 import { buildCardDate } from "./js/utils/buildCardDate";
 import { createNewsCardsArr } from "./js/utils/createNewsCardsArr";
 import { ERROR_MESSAGES } from "./js/constants/ERROR_MESSAGES";
-import NewsCardList from "./js/components/NewsCardList";
-import NewsCard from "./js/components/NewsCard";
-import SearchInput from "./js/components/SearchInput";
+import { FAILED_LOAD_MESSAGES } from './js/constants/FAILED_LOAD_MESSAGES';
 
 const preloaderContainer = document.querySelector(".preloader");
 const searchLoader = preloaderContainer
@@ -77,7 +78,7 @@ function searchNews(word) {
     .catch(err => {
       preloader.toggleSearchLoader(false);
       preloader.toggleFailedLoadItem('true');
-      preloader.renderErrorLoad(`Что то пошло не так...
+      preloader.renderErrorLoad(`${FAILED_LOAD_MESSAGES.news}
         ${err.message}`, loadErrorContainer);
       search.setSubmitButtonState(true);
     })

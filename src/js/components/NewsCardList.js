@@ -54,6 +54,10 @@ class NewsCardList {
     this._paginationButton.addEventListener('click', this._pagination);
   }
 
+  _removeHandlers = () => {
+
+  }
+
   togglePaginationButton = (state) => {
     state ?
       this._paginationButton.classList.add('button_show') :

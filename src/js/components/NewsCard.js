@@ -7,7 +7,7 @@ class NewsCard {
     this._title = card.querySelector('.news-card__title');
     this._paragraph = card.querySelector('.news-card__paragraph');
     this._label = card.querySelector('.news-card__label');
-    this.buildNewsCardDate = buildNewsCardDate;
+    this._buildNewsCardDate = buildNewsCardDate;
     this._newsData = newsData;
   }
 
@@ -15,7 +15,7 @@ class NewsCard {
     if (this._newsData.urlToImage) {
       this._photo.src = this._newsData.urlToImage;
     }
-    this._date.textContent = this.buildNewsCardDate(this._newsData.publishedAt);
+    this._date.textContent = this._buildNewsCardDate(this._newsData.publishedAt);
     this._cardLink.href = this._newsData.url;
     this._title.textContent = this._newsData.title;
     this._paragraph.textContent = this._newsData.description;

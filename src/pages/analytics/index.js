@@ -25,23 +25,26 @@ const statistics = new Statistics({
   createAnaliticsDate,
   createMonth});
 
+// рендерим данные статистики
 statistics.setDigitsTitle();
 statistics.setTotalResults();
 statistics.setMentionsTitle();
 
-// рендерим аналитические графики на страницу
+// рендерим аналитические графики
+let datesMarkup = '';
+let chartsMarkup = '';
 statistics.getAnalytics().forEach(item => {
-  const dateItem = dateTemplate.cloneNode('true');
-  dateItem.textContent = item.date;
-  datesContainer.appendChild(dateItem);
+  dateTemplate.textContent = item.date;
+  datesMarkup += dateTemplate.outerHTML;
 
-  const chartItem = chartTemplate.cloneNode('true');
   if (item.totalCount !== 0) {
-    chartItem.textContent = item.totalCount
+    chartTemplate.textContent = item.totalCount;
   };
-  chartItem.style.width = item.width;
-  chartsContainer.appendChild(chartItem);
+  chartTemplate.style.width = item.width;
+  chartsMarkup += chartTemplate.outerHTML;
 })
+datesContainer.insertAdjacentHTML('afterbegin', datesMarkup);
+chartsContainer.insertAdjacentHTML('afterbegin', chartsMarkup);
 
 // рендерим числовые ориентиры диаграмм
 let markupString = '';

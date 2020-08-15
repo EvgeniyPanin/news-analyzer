@@ -7,14 +7,14 @@ class CommitCard {
     this._date = card.querySelector('.commit-card__date');
     this._cardLink = card.querySelector('.commit-card');
     this._message = card.querySelector('.commit-card__paragraph');
-    this.buildNewsCardDate = buildCardDate;
+    this._buildNewsCardDate = buildCardDate;
     this._commitData = commitData;
   }
 
   create = () => {
     this._avatar.src = this._commitData.author.avatar_url;
     this._name.textContent = this._commitData.commit.committer.name;
-    this._date.textContent = this.buildNewsCardDate(this._commitData.commit.committer.date);
+    this._date.textContent = this._buildNewsCardDate(this._commitData.commit.committer.date);
     this._cardLink.href = this._commitData.html_url;
     this._email.textContent = this._commitData.commit.committer.email;
     this._message.textContent = this._commitData.commit.message;

@@ -60,6 +60,10 @@ class SearchInput {
   setInputContent = (content) => {
     this._input.value = content;
   }
+
+  _removeEventListeners() {
+
+  }
 }
 
 export default SearchInput;

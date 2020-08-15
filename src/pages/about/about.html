@@ -91,15 +91,15 @@
   </section>
   <section class='section commits'>
     <h2 class='commits__title'>История коммитов из GitHub</h2>
-    <a href='https://github.com/EvgeniyPanin' class='section-link section-link_place_commits' target='_blank'>
+    <a href='https://github.com/EvgeniyPanin/news-analyzer' class='section-link section-link_place_commits' target='_blank'>
       Открыть в Github
       <span class='section-link__span'>&rsaquo;</span>
     </a>
     <div class="commits__slider-container">
       <ul class="commits__container">
         <div class='commits__failed-container'>
-          <p class='commits__failed-load-header'>Не удалось загрузить последние коммиты....</p>
-          <p id='error-item' class='commits__failed-load-header'>ошибка такая то</p>
+          <p id='error-header' class='commits__failed-load-header'></p>
+          <p id='error-item' class='commits__failed-load-header'></p>
         </div>
         <template id='commit-card' style='display: none;'>
           <li class='commits__item'>
@@ -116,10 +116,7 @@
                     <p class='commit-card__user-mail'></p>
                   </div>
                 </div>
-                <p class='commit-card__paragraph'>
-                  You can install this plugin directly from NetBeans Plugin Portal: in NetBeans, open Tools >
-                  Plugins > Available plugins and find and install Emmet plugin.
-                </p>
+                <p class='commit-card__paragraph'></p>
               </a>
             </div>
           </li>
