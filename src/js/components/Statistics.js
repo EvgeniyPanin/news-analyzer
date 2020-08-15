@@ -73,8 +73,6 @@ class Statistics {
           }
         })
         return acc;
-      } else {
-        return [...acc, {date, totalCount: 1}];
       }
     }, accumArray)
 

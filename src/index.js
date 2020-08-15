@@ -41,7 +41,8 @@ const newsList = new NewsCardList(
   paginationButton
 );
 
-// функция, описывающая логику поиска, прелоудера и отрисовывающая первые 3 карточки
+// функция выполняется при сабмите формы поиска,
+// описывает логику отображения прелоудера и отрисовывает первые 3 карточки
 function searchNews(word) {
   newsList.clear();
   newsList.toggleNewsSection(false);
@@ -56,14 +57,15 @@ function searchNews(word) {
     .then((res) => {
       const newsArr = res.articles;
       search.setSubmitButtonState(true);
-      localStore.setDataNews(newsArr);
-      localStore.setSearchWord(word);
-      localStore.setTotalResults(res.totalResults);
-      localStore.setCurrentDate(currentDate);
       if (newsArr.length === 0) {
         preloader.toggleSearchLoader(false);
         preloader.toggleNotFoundItem(true);
+        localStore.clear();
       } else {
+        localStore.setDataNews(newsArr);
+        localStore.setSearchWord(word);
+        localStore.setTotalResults(res.totalResults);
+        localStore.setCurrentDate(currentDate);
         preloader.togglePreloader(false);
         preloader.toggleSearchLoader(false);
         const newsCardsArr = createNewsCardsArr(

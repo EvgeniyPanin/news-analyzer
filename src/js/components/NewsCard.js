@@ -17,7 +17,7 @@ class NewsCard {
     }
     this._date.textContent = this._buildNewsCardDate(this._newsData.publishedAt);
     this._cardLink.href = this._newsData.url;
-    this._title.textContent = this._newsData.title;
+    this._title.textContent = this._newsData.titlestr;
     this._paragraph.textContent = this._newsData.description;
     this._label.textContent = this._newsData.source.name;
 

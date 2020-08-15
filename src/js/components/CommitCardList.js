@@ -4,9 +4,11 @@ class CommitCardList {
   }
 
   render = (cardsArr) => {
+    let cardsMarkup = '';
     cardsArr.forEach(card => {
-      this._container.appendChild(card);
+      cardsMarkup += card.outerHTML;
     })
+    this._container.insertAdjacentHTML("afterbegin", cardsMarkup);
   }
 }
 

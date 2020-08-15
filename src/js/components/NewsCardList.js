@@ -39,11 +39,13 @@ class NewsCardList {
   }
 
   _render = (cards) => {
+    let cardsMarkup = '';
     cards.forEach(card => {
       if (card) {
-        this._cardsContainer.appendChild(card);
-      }
+        cardsMarkup += card.outerHTML
+      };
     })
+    this._cardsContainer.insertAdjacentHTML("beforeend", cardsMarkup);
   }
 
   clear = () => {
@@ -54,14 +56,14 @@ class NewsCardList {
     this._paginationButton.addEventListener('click', this._pagination);
   }
 
-  _removeHandlers = () => {
-
-  }
-
   togglePaginationButton = (state) => {
     state ?
       this._paginationButton.classList.add('button_show') :
       this._paginationButton.classList.remove('button_show');
+  }
+
+  _removeHandlers = () => {
+
   }
 }
 
