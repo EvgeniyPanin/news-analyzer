@@ -24,6 +24,8 @@ const cardsContainer = newsSection.querySelector(".news__cards-container");
 const paginationButton = newsSection.querySelector(".button_place_news");
 const cardTemplate = document.querySelector("#card-template");
 const searchForm = document.forms.search;
+const currentDate = buildCurrentDate();
+const oneWeekAgoDate = buildOneWeekAgoDate();
 
 const preloader = new Preloader(preloaderContainer, searchLoader, notFoundItem);
 const localStore = new DataStorage();
@@ -43,16 +45,15 @@ function searchNews(word) {
   preloader.togglePreloader(true);
   preloader.toggleSearchLoader(true);
   search.setSubmitButtonState(false);
-  const currentDate = buildCurrentDate();
   newsApi
-    .getNews(word, currentDate, buildOneWeekAgoDate())
+    .getNews(word, currentDate, oneWeekAgoDate)
     .then((res) => {
       const newsArr = res.articles;
       search.setSubmitButtonState(true);
       localStore.setDataNews(newsArr);
       localStore.setSearchWord(word);
       localStore.setTotalResults(res.totalResults);
-      localStore.setcurrentDate(currentDate);
+      localStore.setCurrentDate(currentDate);
       if (newsArr.length === 0) {
         preloader.toggleSearchLoader(false);
         preloader.toggleNotFoundItem(true);
@@ -71,6 +72,11 @@ function searchNews(word) {
 }
 
 const search = new SearchInput(searchForm, ERROR_MESSAGES, searchNews);
+
+// если данные в локальном хранилище не совпадают с текущей датой, очищаем их
+if (currentDate !== localStore.pullCurrentDate()) {
+  localStore.clear()
+}
 
 // если в локальном хранилище записаны данные, отрисовываем их на странице
 const localCardsDataArr = localStore.pullDataNews();

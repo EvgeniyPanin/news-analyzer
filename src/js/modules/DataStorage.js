@@ -15,7 +15,7 @@ class DataStorage {
     localStorage.setItem('totalResults', JSON.stringify(totalResults));
   }
 
-  setcurrentDate = (date) => {
+  setCurrentDate = (date) => {
     localStorage.setItem('currentDate', JSON.stringify(date));
   }
 
@@ -33,6 +33,10 @@ class DataStorage {
 
   pullCurrentDate = () => {
     return JSON.parse(localStorage.getItem('currentDate'));
+  }
+
+  clear = () => {
+    localStorage.clear();
   }
 }
 

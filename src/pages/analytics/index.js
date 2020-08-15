@@ -1,7 +1,6 @@
 import './analytics.css';
 import DataStorage from '../../js/modules/DataStorage';
 import Statistics from '../../js/components/Statistics';
-import {DAYS_ARR} from '../../js/constants/DAYS_ARR';
 import {createAnaliticsDate} from '../../js/utils/createAnaliticsDate';
 import {createMonth} from '../../js/utils/createMonth';
 
@@ -23,7 +22,6 @@ const statistics = new Statistics({
   digitsTitle,
   totalResults,
   mentionsTitle,
-  DAYS_ARR,
   createAnaliticsDate,
   createMonth});
 
