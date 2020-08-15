@@ -19,6 +19,10 @@ const searchLoader = preloaderContainer
 const notFoundItem = preloaderContainer
   .querySelector(".preloader__logo-not-found")
   .closest(".preloader__container");
+const failedLoadItem = preloaderContainer
+  .querySelector(".preloader__logo-failed-load")
+  .closest(".preloader__container");
+const loadErrorContainer = failedLoadItem.querySelector(".preloader__description");
 const newsSection = document.querySelector(".news");
 const cardsContainer = newsSection.querySelector(".news__cards-container");
 const paginationButton = newsSection.querySelector(".button_place_news");
@@ -27,7 +31,7 @@ const searchForm = document.forms.search;
 const currentDate = buildCurrentDate();
 const oneWeekAgoDate = buildOneWeekAgoDate();
 
-const preloader = new Preloader(preloaderContainer, searchLoader, notFoundItem);
+const preloader = new Preloader(preloaderContainer, searchLoader, notFoundItem, failedLoadItem);
 const localStore = new DataStorage();
 const newsApi = new NewsApi(NEWS_API_CONFIG);
 const newsList = new NewsCardList(
@@ -44,6 +48,7 @@ function searchNews(word) {
   preloader.toggleNotFoundItem(false);
   preloader.togglePreloader(true);
   preloader.toggleSearchLoader(true);
+  preloader.toggleFailedLoadItem(false);
   search.setSubmitButtonState(false);
   newsApi
     .getNews(word, currentDate, oneWeekAgoDate)
@@ -68,7 +73,14 @@ function searchNews(word) {
         );
         newsList.initRender(newsCardsArr);
       }
-    });
+    })
+    .catch(err => {
+      preloader.toggleSearchLoader(false);
+      preloader.toggleFailedLoadItem('true');
+      preloader.renderErrorLoad(`Что то пошло не так...
+        ${err.message}`, loadErrorContainer);
+      search.setSubmitButtonState(true);
+    })
 }
 
 const search = new SearchInput(searchForm, ERROR_MESSAGES, searchNews);

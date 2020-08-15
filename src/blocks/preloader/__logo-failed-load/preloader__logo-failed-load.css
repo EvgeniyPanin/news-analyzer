@@ -1,0 +1,8 @@
+.preloader__logo-failed-load {
+  display: block;
+  width: 96px;
+  height: 96px;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../../../images/failed-load.png');
+}

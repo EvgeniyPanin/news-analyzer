@@ -1,8 +1,9 @@
 class Preloader {
-  constructor(container, searchLoader, notFoundItem) {
+  constructor(container, searchLoader, notFoundItem, failedLoadItem) {
     this._container = container;
     this._searchLoader = searchLoader;
     this._notFoundItem = notFoundItem;
+    this._failedLoadItem = failedLoadItem;
   }
 
   togglePreloader = (state) => {
@@ -21,6 +22,16 @@ class Preloader {
     state ?
       this._notFoundItem.classList.add('preloader__container_active') :
       this._notFoundItem.classList.remove('preloader__container_active');
+  }
+
+  toggleFailedLoadItem = (state) => {
+    state ?
+      this._failedLoadItem.classList.add('preloader__container_active') :
+      this._failedLoadItem.classList.remove('preloader__container_active');
+  }
+
+  renderErrorLoad = (error, container) => {
+    container.textContent = error;
   }
 }
 
