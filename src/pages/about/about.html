@@ -97,7 +97,10 @@
     </a>
     <div class="commits__slider-container">
       <ul class="commits__container">
-
+        <div class='commits__failed-container'>
+          <p class='commits__failed-load-header'>Не удалось загрузить последние коммиты....</p>
+          <p id='error-item' class='commits__failed-load-header'>ошибка такая то</p>
+        </div>
         <template id='commit-card' style='display: none;'>
           <li class='commits__item'>
             <div class='commits__card-container'>

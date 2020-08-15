@@ -11,6 +11,8 @@ import { createCommitCardsArr } from "../../js/utils/createCommitCardsArr";
 
 const cardTemplate = document.querySelector('#commit-card');
 const commitsContainer = document.querySelector('.commits__container');
+const failedLoadContainer = document.querySelector('.commits__failed-container');
+const errorItem = failedLoadContainer.querySelector('#error-item');
 
 const commitsList = new CommitCardList(commitsContainer);
 const githubApi = new GithubApi(GITHUB_API_CONFIG);
@@ -47,4 +49,8 @@ githubApi.getCommits()
       slideClass: 'commits__item',
       wrapperClass: 'commits__container',
     })
-  });
+  })
+  .catch(err => {
+    failedLoadContainer.classList.add('commits__failed-container_active');
+    errorItem.textContent = err.message;
+  })
