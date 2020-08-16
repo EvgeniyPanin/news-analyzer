@@ -1,4 +1,4 @@
-const authorization = NODE_ENV === 'development' ? 'authorization' : 'x-api-key';
+
 
 class NewsApi {
   constructor(config) {
@@ -8,11 +8,8 @@ class NewsApi {
   }
 
   getNews = (word, currentDate, oneWeekAgoDate) => {
-    return fetch(`${this._apiURL}?q=${word}&to=${currentDate}&from=${oneWeekAgoDate}&pageSize=${this._pageSize}`, {
+    return fetch(`${this._apiURL}?q=${word}&to=${currentDate}&from=${oneWeekAgoDate}&pageSize=${this._pageSize}&apiKey=${this._apiKey}`, {
       method: 'GET',
-      headers: {
-        [authorization]: this._apiKey,
-      }
     }).then((res) => {
       if (res.ok) {
         return res.json()
