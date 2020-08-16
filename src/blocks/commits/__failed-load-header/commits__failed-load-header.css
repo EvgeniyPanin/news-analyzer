@@ -1,0 +1,11 @@
+.commits__failed-load-header {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 1em;
+}
+
+@media screen and (max-width: 800px) {
+  .commits__failed-load-header {
+    margin: .5em;
+  }
+}

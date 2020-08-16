@@ -36,20 +36,28 @@
           Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.
         </p>
         <form name='search' class='search-form'>
-          <input type='text' class='search-form__input' placeholder='Введите тему новости' required>
-          <button class='button button_place_search-form'>Искать</button>
+          <input name='input'
+           type='text'
+           class='search-form__input'
+           placeholder='Введите тему новости'
+           minlength="2"
+           maxlength="50"
+           required
+           novalidate>
+           <span class='search-form__error'></span>
+          <button class='button button_place_search-form button_disabled' disabled>Искать</button>
         </form>
       </div>
     </section>
   </div>
   <section class='section preloader'>
-    <div class='preloader__container preloader__container_active'>
+    <div class='preloader__container'>
       <div class='preloader__image-container'>
         <i class='preloader__circle'></i>
       </div>
       <p class='preloader__description'>Идет поиск новостей...</p>
     </div>
-    <div class='preloader__container preloader__container_active'>
+    <div class='preloader__container'>
       <div class='preloader__image-container'>
         <span class='preloader__logo-not-found'></span>
       </div>
@@ -60,73 +68,34 @@
         К сожалению по вашему запросу ничего не найдено.
       </p>
     </div>
+    <div class='preloader__container'>
+      <div class='preloader__image-container'>
+        <span class='preloader__logo-failed-load'></span>
+      </div>
+      <p class='preloader__description'></p>
+    </div>
   </section>
   <section class='section news'>
     <h2 class='news__title'>Результаты поиска</h2>
     <a class='section-link' href='./analytics.html'>Посмотреть аналитику <span class='section-link__span'>&rsaquo;</span></a>
     <ul class='news__cards-container'>
-      <li>
-        <a class='news-card' href='https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki/' target='_blank'>
-          <span class='news-card__photo-container'>
-            <img class='news-card__photo' src="<%=require('./images/image_08.jpg').default%>" alt="Обложка новости">
-          </span>
-          <div class='news-card__content-container'>
-            <span class='news-card__date'>2 августа, 2019</span>
-            <h3 class='news-card__title'>Национальное достояние – парки</h3>
-            <p class='news-card__paragraph'>
-              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-            </p>
-            <span class='news-card__label'>Лента.ру</span>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class='news-card' href='https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki/' target='_blank'>
-          <span class='news-card__photo-container'>
-            <img class='news-card__photo' src="<%=require('./images/image_08.jpg').default%>" alt="Обложка новости">
-          </span>
-          <div class='news-card__content-container'>
-            <span class='news-card__date'>2 августа, 2019</span>
-            <h3 class='news-card__title'>Национальное достояние – парки</h3>
-            <p class='news-card__paragraph'>
-              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-            </p>
-            <span class='news-card__label'>Лента.ру</span>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class='news-card' href='https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki/' target='_blank'>
-          <span class='news-card__photo-container'>
-            <img class='news-card__photo' src="<%=require('./images/image_08.jpg').default%>" alt="Обложка новости">
-          </span>
-          <div class='news-card__content-container'>
-            <span class='news-card__date'>2 августа, 2019</span>
-            <h3 class='news-card__title'>Национальное достояние – парки</h3>
-            <p class='news-card__paragraph'>
-              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-            </p>
-            <span class='news-card__label'>Лента.ру</span>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a class='news-card' href='https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki/' target='_blank'>
-          <span class='news-card__photo-container'>
-            <img class='news-card__photo' src="<%=require('./images/image_08.jpg').default%>" alt="Обложка новости">
-          </span>
-          <div class='news-card__content-container'>
-            <span class='news-card__date'>2 августа, 2019</span>
-            <h3 class='news-card__title'>Национальное достояние – парки</h3>
-            <p class='news-card__paragraph'>
-              В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-            </p>
-            <span class='news-card__label'>Лента.ру</span>
-          </div>
-        </a>
-      </li>
+
+      <template id='card-template' style='display: none;'>
+        <li class='news__item'>
+          <a class='news-card' href='' target='_blank'>
+            <span class='news-card__photo-container'>
+              <img class='news-card__photo' src="<%=require('./images/breaking_news.png').default%>" alt="Обложка новости">
+            </span>
+              <span class='news-card__date'></span>
+              <h3 class='news-card__title'></h3>
+              <p class='news-card__paragraph'></p>
+              <span class='news-card__label'></span>
+          </a>
+        </li>
+      </template>
+
     </ul>
-    <button class='button button_place_news'>Показать еще</button>
+    <button class='button button_place_news button_show'>Показать еще</button>
   </section>
   <section class='section author'>
     <div class='author__avatar-container'>

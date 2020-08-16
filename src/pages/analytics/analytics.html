@@ -17,7 +17,7 @@
     <span class='header__logo'>NewsAnalyzer</span>
     <nav class='navigation'>
       <ul class='navigation__links'>
-        <li class='navigation__item navigation__item_active'>
+        <li class='navigation__item'>
           <a href='./index.html' class='navigation__link navigation__link_theme_black'>Главная</a>
         </li>
         <li class='navigation__item'>
@@ -51,39 +51,23 @@
   <section class='section analytics'>
     <h2 class='analytics__title'>Аналитика по дням</h2>
     <div class='analytics__container'>
-      <p class='analytics__column-title'>Дата (август)</p>
+      <p class='analytics__column-title'></p>
       <p class='analytics__column-title'>Кол-во упоминаний</p>
-      <div class='analytics__charts-container'>
-        <p class='analytics__date'>19, пн</p>
-        <p class='analytics__date'>20, вт</p>
-        <p class='analytics__date'>21, ср</p>
-        <p class='analytics__date'>22, чт</p>
-        <p class='analytics__date'>23, пт</p>
-        <p class='analytics__date'>24, сб</p>
-        <p class='analytics__date'>25, вс</p>
+      <div id='dates' class='analytics__charts-container'>
+        <template id='date-template' style='display: none;'>
+          <p class='analytics__date'></p>
+        </template>
       </div>
-      <div class='analytics__charts-container'>
+      <div id='diagrams' class='analytics__charts-container'>
         <div class='analytics__number-container analytics__number-container_place_top'>
-          <p class='analytics__number'>0</p>
-          <p class='analytics__number'>25</p>
-          <p class='analytics__number'>50</p>
-          <p class='analytics__number'>75</p>
-          <p class='analytics__number'>100</p>
+          <template id='analytics-number' style='display: none;'>
+            <p class='analytics__number'></p>
+          </template>
         </div>
-        <p class='analytics__diagram' style='width: 20%'>15</p>
-        <p class='analytics__diagram' style='width: 27%'>18</p>
-        <p class='analytics__diagram' style='width: 13%'>11</p>
-        <p class='analytics__diagram' style='width: 45%'>39</p>
-        <p class='analytics__diagram' style='width: 55%'>45</p>
-        <p class='analytics__diagram' style='width: 80%'>73</p>
-        <p class='analytics__diagram' style='width: 38%'>34</p>
-        <div class='analytics__number-container analytics__number-container_place_bottom'>
-          <p class='analytics__number'>0</p>
-          <p class='analytics__number'>25</p>
-          <p class='analytics__number'>50</p>
-          <p class='analytics__number'>75</p>
-          <p class='analytics__number'>100</p>
-        </div>
+        <template id='diagram-template' style='display: none;'>
+          <p class='analytics__diagram' style='width: 20%'></p>
+        </template>
+        <div class='analytics__number-container analytics__number-container_place_bottom'></div>
       </div>
     </div>
   </section>

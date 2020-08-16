@@ -48,7 +48,8 @@
   "dependencies": {
     "babel-polyfill": "6.26.0",
     "core-js": "3.4.1",
-    "path": "0.12.7"
+    "path": "0.12.7",
+    "swiper": "6.1.1"
   },
   "homepage": "https://github.com/EvgeniyPanin/news-analyzer"
 }

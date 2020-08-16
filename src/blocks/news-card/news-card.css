@@ -1,6 +1,5 @@
 @import url('./__photo-container/news-card__photo-container.css');
 @import url('./__photo/news-card__photo.css');
-@import url('./__content-container/news-card__content-container.css');
 @import url('./__date/news-card__date.css');
 @import url('./__title/news-card__title.css');
 @import url('./__paragraph/news-card__paragraph.css');
@@ -8,11 +7,12 @@
 
 .news-card {
   border-radius: 8px;
+  width: 100%;
+  height: 100%;
   background: #fff;
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   color: inherit;
   text-decoration: none;
   transition: .2s;

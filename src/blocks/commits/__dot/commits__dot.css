@@ -5,6 +5,7 @@
   height: 8px;
   margin-right: 8px;
   background: #D1D2D6;
+  cursor: pointer;
 }
 
 .commits__dot:last-of-type {

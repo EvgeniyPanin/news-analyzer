@@ -11,6 +11,9 @@
 @import url('./__slider-button/_place/_right/commits__slider-button_place_right.css');
 @import url('../button/_place/button_place_commits.css');
 @import url('./__button-container/commits__button-container.css');
+@import url('./__failed-load-header/commits__failed-load-header.css');
+@import url('./__failed-container/commits__failed-container.css');
+@import url('./__failed-container/_active/commits__failed-container_active.css');
 
 
 .commits {

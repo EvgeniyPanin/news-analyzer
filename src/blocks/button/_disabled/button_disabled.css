@@ -1,0 +1,8 @@
+.button_disabled {
+  cursor: text;
+  background: #b8c4d8;
+}
+
+.button_disabled:hover {
+  background: #b8c4d8;
+}
